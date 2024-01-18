@@ -10,11 +10,11 @@ public class Saab95 extends Car {
     public String modelName; // The car model name
  */
     public Saab95(){
-        nrDoors = 2;
-        color = Color.red;
-        enginePower = 125;
-	    turboOn = false;
-        modelName = "Saab95";
+        setNrDoors(2);
+        setColor(Color.red);
+        setEnginePower(125);
+        setTurboOff();
+        setModelName("Saab95");
         stopEngine();
     }
     
@@ -62,7 +62,7 @@ public class Saab95 extends Car {
     public void incrementSpeed(double amount){
         currentSpeed = getCurrentSpeed() + speedFactor() * amount;
     }
-
+    @Override
     public void decrementSpeed(double amount){
         currentSpeed = getCurrentSpeed() - speedFactor() * amount;
     }
@@ -72,8 +72,9 @@ public class Saab95 extends Car {
         incrementSpeed(amount);
     }
 
-    // TODO fix this method according to lab pm
-    public void brake(double amount){
-        decrementSpeed(amount);
+
+    @Override
+    public void move() {
+
     }
 }
