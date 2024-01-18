@@ -9,6 +9,7 @@ public class Volvo240 extends Car{
         setEnginePower(100);
         setModelName("Volvo240");
         stopEngine();
+        Direction direction = Direction.EAST;
     }
     @Override
     public void incrementSpeed(double amount){
