@@ -1,5 +1,3 @@
-import java.awt.*;
-
 interface iCar {
     void startEngine();
 
