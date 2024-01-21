@@ -10,7 +10,7 @@ public class Saab95 extends Car {
         setTurboOff();
         setModelName("Saab95");
         stopEngine();
-        Direction direction = Direction.EAST;
+
     }
 
     @Override
@@ -33,9 +33,4 @@ public class Saab95 extends Car {
         return getEnginePower() * 0.01 * turbo;
     }
 
-
-    @Override
-    public void move() {
-
-    }
 }

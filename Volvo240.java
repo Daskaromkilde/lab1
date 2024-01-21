@@ -1,7 +1,7 @@
 import java.awt.*;
 
 public class Volvo240 extends Car{
-
+    final static double trimFactor = 1.25;
 
     public Volvo240(){
         setNrDoors(4);
@@ -9,7 +9,6 @@ public class Volvo240 extends Car{
         setEnginePower(100);
         setModelName("Volvo240");
         stopEngine();
-        Direction direction = Direction.EAST;
     }
     @Override
     public void incrementSpeed(double amount){
@@ -26,13 +25,7 @@ public class Volvo240 extends Car{
         }
     }
     public double speedFactor(){
-        double trimFactor = 1.25;
         return getEnginePower() * 0.01 * trimFactor;
     }
 
-
-    @Override
-    public void move() {
-
-    }
 }
