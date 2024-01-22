@@ -9,8 +9,18 @@ public abstract class Car implements iCar, iMovable {
     private Color color; // Color of the car
     private String modelName; // The car model name
     private boolean turboOn;
-    private Point position = new Point(0, 0); // The initial starting position of the car
-    private eDirection direction = eDirection.EAST; // The initial facing of the car
+    private Point position;
+    private eDirection direction;
+
+    public Car(int nrDoors, double enginePower, Color color, String modelName) {
+        this.nrDoors = nrDoors;
+        this.enginePower = enginePower;
+        this.color = color;
+        this.modelName = modelName;
+        this.position = new Point(0,0);  // The initial starting position of the car
+        this.direction = eDirection.EAST; // The initial facing of the car
+        stopEngine();
+    }
 
 
     public eDirection getDirection() {

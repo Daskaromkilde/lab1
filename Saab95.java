@@ -4,13 +4,8 @@ public class Saab95 extends Car {
 
 
     public Saab95(){
-        setNrDoors(2);
-        setColor(Color.red);
-        setEnginePower(125);
+        super(2, 125, Color.red, "Saab95");
         setTurboOff();
-        setModelName("Saab95");
-        stopEngine();
-
     }
 
     @Override

@@ -4,11 +4,7 @@ public class Volvo240 extends Car{
     final static double trimFactor = 1.25;
 
     public Volvo240(){
-        setNrDoors(4);
-        setColor(Color.black);
-        setEnginePower(100);
-        setModelName("Volvo240");
-        stopEngine();
+        super(4, 100, Color.black, "Volvo240");
     }
     @Override
     public void incrementSpeed(double amount){
