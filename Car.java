@@ -105,7 +105,7 @@ public abstract class Car implements iCar, iMovable {
         if (amount > 0 && amount <= 1) {
             incrementSpeed(amount);
         }else {
-            throw new IllegalArgumentException("too much acceleration");
+            throw new IllegalArgumentException("invalid amount of acceleration");
         }
     }
 
@@ -114,7 +114,7 @@ public abstract class Car implements iCar, iMovable {
             decrementSpeed(amount);
         }else
         {
-            throw new IllegalArgumentException("too much brake force");
+            throw new IllegalArgumentException("invalid amount of brake force");
         }
     }
 

@@ -41,7 +41,7 @@ class CarTest {
         assertEquals("MinFinaVolvo", volvo.getModelName());
         String volvoFul = "MinFulaVolvo";
         String volvoFin = volvo.getModelName();
-        assertFalse(Boolean.parseBoolean(volvoFul), volvoFin);
+        assertNotSame(volvoFul, volvoFin);
     }
 
     @Test
@@ -147,6 +147,8 @@ class CarTest {
     }
 
 
+
+
     @Test
     void decrementSpeed() {
         saab.setTurboOff();
@@ -165,7 +167,23 @@ class CarTest {
         volvo.gas(0.7);
         assertEquals(50.875, volvo.getCurrentSpeed());
 
+        try {
+            volvo.gas(1.1);
+            fail(" This didnt throw an IllegalArgumentException ");
+        } catch (IllegalArgumentException ignored) {
+        }
+
+        volvo.setCurrentSpeed(99);
+        volvo.gas(1);
+        assertTrue(volvo.getCurrentSpeed() <= volvo.getEnginePower());
+
+
     }
+
+
+
+
+
 
     @Test
     void brake() {
@@ -173,6 +191,15 @@ class CarTest {
         saab.setCurrentSpeed(47);
         saab.brake(0.8);
         assertEquals(45.7, saab.getCurrentSpeed());
+
+        try {
+            saab.brake(-0.9);
+            fail(" This didnt throw an IllegalArgumentException ");
+        } catch (IllegalArgumentException ignored) { //swap ignored with "e"
+        // enables to do System.out.println(e.getMessage);
+            // which evaluetes to "too much brake force"
+            }
+
     }
 
     @Test
