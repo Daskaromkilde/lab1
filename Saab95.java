@@ -4,13 +4,8 @@ public class Saab95 extends Car {
 
 
     public Saab95(){
-        setNrDoors(2);
-        setColor(Color.red);
-        setEnginePower(125);
+        super(2, 125, Color.red, "Saab95");
         setTurboOff();
-        setModelName("Saab95");
-        stopEngine();
-        Direction direction = Direction.EAST;
     }
 
     @Override
@@ -33,9 +28,4 @@ public class Saab95 extends Car {
         return getEnginePower() * 0.01 * turbo;
     }
 
-
-    @Override
-    public void move() {
-
-    }
 }
