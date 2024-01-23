@@ -87,10 +87,20 @@ class CarTest {
 
     @Test
     void gas() {
+        Volvo240 v = new Volvo240();
+        double c = v.getCurrentSpeed();
+        v.gas(0.25);
+        assertTrue(c < v.getCurrentSpeed());
+
     }
 
     @Test
     void brake() {
+        Volvo240 v = new Volvo240();
+        v.gas(0.25);
+        double c = v.getCurrentSpeed();
+        v.brake(0.25);
+        assertTrue(c > v.getCurrentSpeed());
     }
 
     @Test
