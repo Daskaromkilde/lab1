@@ -95,9 +95,21 @@ public abstract class Car implements iCar, iMovable {
         turboOn = false;
     }
 
-    public abstract void incrementSpeed(double amount);
-    public abstract void decrementSpeed(double amount);
+    public void incrementSpeed(double amount){
+        if(getCurrentSpeed() + speedFactor() * amount <= getEnginePower()
+                && getCurrentSpeed() + speedFactor() * amount > 0
+                && speedFactor() * amount >= 0) {
+            setCurrentSpeed(Math.min(getCurrentSpeed() + speedFactor() * amount, getEnginePower()));
+        }
+    }
 
+    public void decrementSpeed(double amount){
+        if (amount * speedFactor() >= 0) {
+            setCurrentSpeed(Math.max(getCurrentSpeed() - speedFactor() * amount, 0));
+        }
+    }
+
+    public abstract double speedFactor();
 
 
 
