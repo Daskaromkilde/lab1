@@ -1,7 +1,8 @@
 import java.awt.*;
 
-public class Saab95 extends Car {
+public class Saab95 extends Car implements iTurbo {
 
+    protected boolean turboOn;
 
     public Saab95(){
         super(2, 125, Color.red, "Saab95");
@@ -12,10 +13,16 @@ public class Saab95 extends Car {
     @Override
     public double speedFactor(){
         double turbo = 1;
-        if(getTurbo()){
+        if(turboOn){
             turbo = 1.3;
         }
-        return getEnginePower() * 0.01 * turbo;
+        return enginePower * 0.01 * turbo;
     }
+
+    @Override
+    public void setTurbo(boolean b) {
+        turboOn = b;
+    }
+
 
 }

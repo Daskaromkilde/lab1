@@ -49,8 +49,8 @@ class CarTest {
         saab.setTurboOff();
         assertFalse(saab.getTurbo(),  "Turbo should be off by default");
 
-        saab.setTurboOn();
-        assertTrue(saab.getTurbo(), "Turbo should be on after setting it on");
+        saab.setTurbo(true);
+        assertTrue(saab.turboOn, "Turbo should be on after setting it on");
 
         saab.setTurboOff();
         assertFalse(saab.getTurbo(), "Turbo should be off after setting it off");
@@ -84,11 +84,11 @@ class CarTest {
 
     @Test
     void getEnginePower() {
-        volvo.setEnginePower(200);
-        assertEquals(200, volvo.getEnginePower(), "Engine power should be updated correctly");
+        volvo.enginePower = 200;
+        assertEquals(200, volvo.enginePower, "Engine power should be updated correctly");
 
-        volvo.setEnginePower(100);
-        assertEquals(100, volvo.getEnginePower(), "Engine power should be updated correctly");
+        volvo.enginePower = 100;
+        assertEquals(100, volvo.enginePower, "Engine power should be updated correctly");
     }
 
     @Test
@@ -122,8 +122,8 @@ class CarTest {
 
     @Test
     void setTurboOn() {
-        saab.setTurboOn();
-        assertTrue(saab.getTurbo(), "Turbo should be on");
+        saab.setTurbo(true);
+        assertTrue(saab.turboOn, "Turbo should be on");
 
     }
 
@@ -135,7 +135,7 @@ class CarTest {
 
     @Test
     void incrementSpeed() {
-        saab.setTurboOn();
+        saab.setTurbo(true);
         saab.setCurrentSpeed(45.0);
         saab.incrementSpeed(5.0);
         assertEquals(53.125, saab.getCurrentSpeed());
@@ -151,7 +151,7 @@ class CarTest {
 
     @Test
     void decrementSpeed() {
-        saab.setTurboOff();
+        saab.setTurbo(false);
         saab.setCurrentSpeed(40.0);
         saab.decrementSpeed(8.0);
         assertEquals(30.0, saab.getCurrentSpeed());
@@ -175,7 +175,7 @@ class CarTest {
 
         volvo.setCurrentSpeed(99);
         volvo.gas(1);
-        assertTrue(volvo.getCurrentSpeed() <= volvo.getEnginePower());
+        assertTrue(volvo.getCurrentSpeed() <= volvo.enginePower);
 
 
     }
@@ -187,7 +187,7 @@ class CarTest {
 
     @Test
     void brake() {
-        saab.setTurboOn();
+        saab.setTurbo(true);
         saab.setCurrentSpeed(47);
         saab.brake(0.8);
         assertEquals(45.7, saab.getCurrentSpeed());

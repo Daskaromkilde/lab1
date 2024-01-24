@@ -4,11 +4,11 @@ public abstract class Car implements iCar, iMovable {
 
 
     private int nrDoors; // Number of doors on the car
-    private double enginePower; // Engine power of the car
+    protected double enginePower; // Engine power of the car
     private double currentSpeed; // The current speed of the car
     private Color color; // Color of the car
     private String modelName; // The car model name
-    private boolean turboOn;
+    //private boolean turboOn;
     private Point position;
     private eDirection direction;
 
@@ -45,27 +45,23 @@ public abstract class Car implements iCar, iMovable {
         return modelName;
     }
 
-    public boolean getTurbo(){
-       return turboOn;
-   }
+//    public boolean getTurbo(){
+//       return turboOn;
+//   }
     public void setCurrentSpeed(double amount) {
         currentSpeed = amount;
     }
     public void setNrDoors(int amount){
         nrDoors = amount;
     }
-    public void setEnginePower(int amount) {
-        enginePower = amount;
-    }
+
     public void setModelName(String name) {
         modelName = name;
     }
     public int getNrDoors(){
         return nrDoors;
     }
-    public double getEnginePower(){
-        return enginePower;
-    }
+
 
     public double getCurrentSpeed(){
         return currentSpeed;
@@ -87,19 +83,19 @@ public abstract class Car implements iCar, iMovable {
         currentSpeed = 0;
     }
 
-    public void setTurboOn(){
-        turboOn = true;
-    }
+//    public void setTurboOn(){
+//        turboOn = true;
+//    }
 
-    public void setTurboOff(){
-        turboOn = false;
-    }
+//    public void setTurboOff(){
+//        turboOn = false;
+//    }
 
     public void incrementSpeed(double amount){
         if(getCurrentSpeed() + speedFactor() * amount <= getEnginePower()
                 && getCurrentSpeed() + speedFactor() * amount > 0
                 && speedFactor() * amount >= 0) {
-            setCurrentSpeed(Math.min(getCurrentSpeed() + speedFactor() * amount, getEnginePower()));
+            setCurrentSpeed(Math.min(getCurrentSpeed() + speedFactor() * amount, enginePower));
         }
     }
 
