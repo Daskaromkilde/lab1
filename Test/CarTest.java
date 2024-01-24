@@ -46,14 +46,14 @@ class CarTest {
 
     @Test
     void getTurbo() {
-        saab.setTurboOff();
-        assertFalse(saab.getTurbo(),  "Turbo should be off by default");
+        saab.setTurbo(false);
+        assertFalse(saab.turboOn,  "Turbo should be off by default");
 
         saab.setTurbo(true);
         assertTrue(saab.turboOn, "Turbo should be on after setting it on");
 
-        saab.setTurboOff();
-        assertFalse(saab.getTurbo(), "Turbo should be off after setting it off");
+        saab.setTurbo(false);
+        assertFalse(saab.turboOn, "Turbo should be off after setting it off");
     }
 
     @Test
@@ -129,8 +129,8 @@ class CarTest {
 
     @Test
     void setTurboOff() {
-        saab.setTurboOff();
-        assertFalse(saab.getTurbo(), "Turbo should be off");
+        saab.setTurbo(false);
+        assertFalse(saab.turboOn, "Turbo should be off");
     }
 
     @Test

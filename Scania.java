@@ -20,7 +20,7 @@ public class Scania extends Car{
 
     @Override
     public double speedFactor(){
-        return getEnginePower() * 0.01;
+        return enginePower * 0.01;
     }
 
     public void setBedAngle(int angle) {

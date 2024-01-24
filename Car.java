@@ -92,7 +92,7 @@ public abstract class Car implements iCar, iMovable {
 //    }
 
     public void incrementSpeed(double amount){
-        if(getCurrentSpeed() + speedFactor() * amount <= getEnginePower()
+        if(getCurrentSpeed() + speedFactor() * amount <= enginePower
                 && getCurrentSpeed() + speedFactor() * amount > 0
                 && speedFactor() * amount >= 0) {
             setCurrentSpeed(Math.min(getCurrentSpeed() + speedFactor() * amount, enginePower));
