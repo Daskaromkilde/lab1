@@ -11,6 +11,8 @@ public abstract class Car implements iCar, iMovable {
     //private boolean turboOn;
     private Point position;
     private eDirection direction;
+    private Cartransporter cartransporter; // if null then not on transport
+    protected double weight;
 
     public Car(int nrDoors, double enginePower, Color color, String modelName) {
         this.nrDoors = nrDoors;
@@ -32,8 +34,14 @@ public abstract class Car implements iCar, iMovable {
     }
 
 
+    public void transporter(Cartransporter c) {
+        cartransporter = c;
+    }
 
     public Point getPosition() {
+        if (cartransporter != null) {
+        return cartransporter.getPosition();
+        }
         return new Point(this.position);
     }
 

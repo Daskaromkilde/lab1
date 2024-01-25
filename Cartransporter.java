@@ -1,24 +1,73 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.awt.*;
+import java.util.Stack;
 
 
-public class Cartransporter extends Scania{
-    private List<Car> lowerDec = new ArrayList<>();
-    private List<Car> upperDec = new ArrayList<>();
-
+public class Cartransporter extends Car implements iTruckBed{
+    protected Stack<Car> loadedCars = new Stack<>();
     private Car car;
     private boolean carConnected;
-    private Point position;
-
-
     private boolean rampDown;
     private int inRangeUnit = 5;
 
+    public Cartransporter() {
+        super(2, 125, Color.RED, "TruckTransportingCars", 5.7);
+    }
 
-    public Cartransporter()
-    {
+    public double speedFactor() {
+        return enginePower * 0.01;
+    }
 
+    public void gas(double amount) { // only gas if ramp is up
+        if(!this.rampDown) {
+            super.gas(amount);
+        }
+    }
+
+    public void addCar(Car c) {
+        if(!rampDown || !inRange(c.getPosition())) {
+            throw new IllegalArgumentException("cant add car if ramp not lowered or car not in range");
+        } if (c instanceof Cartransporter) {
+            throw new IllegalArgumentException("cant add a car transporter");
+        } if (loadedCars.size() >= maxLoadedCars) {
+            throw new IllegalArgumentException("Cant add car. Transporter is full.");
+        } if (c.weight > maxWeightPerCar) {
+            throw new IllegalArgumentException("Car is too heavy");
+        }
+        loadedCars.push(c);
+    }
+
+    public Car findCar(String ModelName) {
+        int size = loadedCars.size();
+
+        for (int i = 0; i < size; i++) {
+          if (loadedCars.get(i).getModelName().equals(ModelName)) {
+              return loadedCars.get(i);
+          }
+        }
+        throw new IllegalArgumentException("car dosen't exists in ramp");
+    }
+
+    public void removeCar(Car c) {
+        if(!rampDown) {
+            throw new IllegalArgumentException("cant add car if ramp not lowered");
+        }
+
+        Stack<Car> carpoped = new Stack<>();
+        int size = loadedCars.size();
+
+        for (int i = 0; i < size; i++) {
+          Car pop = loadedCars.pop();
+          if (pop.equals(c)) {
+              pop.setPosition(new Point(getPosition().x + inRangeUnit/2, getPosition().y + inRangeUnit/2));
+              break;
+          }
+          carpoped.push(pop);
+        }
+        for (int i = 0; i < carpoped.size(); i++) {
+            loadedCars.push(carpoped.pop());
+        }
     }
     public void setRampDown(boolean b)
     {
@@ -29,36 +78,11 @@ public class Cartransporter extends Scania{
         return rampDown;
     }
 
-    public void setCar(Car c) //
-    {
-        if(c != null) {
-            car = c;
-            carConnected = true;
-        }else
-        {
-            car = null;
-            carConnected = false;
-        }
 
-    }
-    public Point getPosition()
-    {
-        if (carConnected)
-        {
-            return car.getPosition();
-        }
-        return position;
-    }
 
     public boolean inRange(Point p)
     {
             return Math.abs(p.x - position.x) > inRangeUnit &&  Math.abs(p.y - position.y) > inRangeUnit;
     }
-    //Bilar kan endast lastas om rampen är nere, och de befinner sig rimligt nära biltransporten
-    // (gör ett eget antagande, de exakta detaljerna är inte viktiga).
-    //Bilar kan endast lossas om rampen är nere. De bör då hamna rimligt nära biltransporten.
-    //Bilar kan endast lossas i omvänd ordning från hur de lastades, dvs den sista bilen som lastades måste vara först att lossas (first-in-last-out).
-    //Biltransporten ska inte kunna lasta på en annan biltransport.
-    //Under det att en bil är lastad på biltransporten ska dess position i världen alltid vara densamma som biltransportens position.
 
 }
