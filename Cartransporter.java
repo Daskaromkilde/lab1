@@ -37,6 +37,7 @@ public class Cartransporter extends Car implements iTruckBed{
         } if (c.weight > maxWeightPerCar) {
             throw new IllegalArgumentException("Car is too heavy");
         }
+        c.transporter(this);
         loadedCars.push(c);
     }
 
@@ -63,6 +64,7 @@ public class Cartransporter extends Car implements iTruckBed{
           Car pop = loadedCars.pop();
           if (pop.equals(c)) {
               pop.setPosition(new Point(getPosition().x + inRangeUnit/2, getPosition().y + inRangeUnit/2));
+              pop.transporter(null);
               break;
           }
           carpoped.push(pop);
