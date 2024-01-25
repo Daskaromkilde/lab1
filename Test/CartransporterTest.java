@@ -99,7 +99,8 @@ class CartransporterTest {
         Point y = v.getPosition();
         assertEquals(x, y);
 
-        t.removeCar();
+        t.removeCar(v);
+        System.out.println(v.getPosition());
 
     }
 
