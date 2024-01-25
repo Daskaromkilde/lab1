@@ -5,7 +5,7 @@ public class Scania extends Car implements iTruckBed{
     private int bedAngle;
 
     public Scania() {
-        super(2, 125, Color.BLUE, "Scania", 3.6);
+        super(2, 125, Color.BLUE, "Scania", 3.6, 102);
         setBedAngle(lowestBedAngle);
     }
 

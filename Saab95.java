@@ -5,7 +5,7 @@ public class Saab95 extends Car implements iTurbo {
     protected boolean turboOn;
 
     public Saab95(){
-        super(2, 125, Color.red, "Saab95", 1.9);
+        super(2, 125, Color.red, "Saab95", 1.9, 101);
     }
 
 
