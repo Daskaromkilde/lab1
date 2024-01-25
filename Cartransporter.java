@@ -9,7 +9,9 @@ public class Cartransporter extends Car implements iTruckBed{
     private Car car;
     private boolean carConnected;
     private boolean rampDown;
-    private int inRangeUnit = 5;
+    protected final int inRangeUnit = 5;
+    private final int maxLoadedCars = 5;
+    private final double maxWeightPerCar = 2.5;
 
     public Cartransporter() {
         super(2, 125, Color.RED, "TruckTransportingCars", 5.7);
@@ -69,13 +71,16 @@ public class Cartransporter extends Car implements iTruckBed{
             loadedCars.push(carpoped.pop());
         }
     }
-    public void setRampDown(boolean b)
-    {
-        this.rampDown = b;
+
+
+    public void setRampDown(boolean b) {
+        if (this.getCurrentSpeed() == 0) {
+            this.rampDown = b;
+        }
     }
-    public boolean getRampDown()
-    {
-        return rampDown;
+
+    public boolean getRampDown() {
+        return this.rampDown;
     }
 
 

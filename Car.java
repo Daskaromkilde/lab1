@@ -14,14 +14,16 @@ public abstract class Car implements iCar, iMovable {
     private Cartransporter cartransporter; // if null then not on transport
     protected double weight;
 
-    public Car(int nrDoors, double enginePower, Color color, String modelName) {
+    public Car(int nrDoors, double enginePower, Color color, String modelName, double weight) {
         this.nrDoors = nrDoors;
         this.enginePower = enginePower;
         this.color = color;
         this.modelName = modelName;
+        this.weight = weight; // in tons
         this.position = new Point(0,0);  // The initial starting position of the car
         this.direction = eDirection.EAST; // The initial facing of the car
         stopEngine();
+        this.setPosition(this.position);
     }
 
 
@@ -53,9 +55,7 @@ public abstract class Car implements iCar, iMovable {
         return modelName;
     }
 
-//    public boolean getTurbo(){
-//       return turboOn;
-//   }
+
     public void setCurrentSpeed(double amount) {
         currentSpeed = amount;
     }
@@ -91,13 +91,7 @@ public abstract class Car implements iCar, iMovable {
         currentSpeed = 0;
     }
 
-//    public void setTurboOn(){
-//        turboOn = true;
-//    }
 
-//    public void setTurboOff(){
-//        turboOn = false;
-//    }
 
     public void incrementSpeed(double amount){
         if(getCurrentSpeed() + speedFactor() * amount <= enginePower
