@@ -3,7 +3,7 @@ import java.util.List;
 import java.awt.*;
 
 
-public class Trailer extends Scania{
+public class Cartransporter extends Scania{
     private List<Car> lowerDec = new ArrayList<>();
     private List<Car> upperDec = new ArrayList<>();
 
@@ -16,7 +16,7 @@ public class Trailer extends Scania{
     private int inRangeUnit = 5;
 
 
-    public Trailer()
+    public Cartransporter()
     {
 
     }
