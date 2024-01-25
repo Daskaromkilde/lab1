@@ -10,32 +10,43 @@ public class Scania extends Car{
     }
 
 
-    public void gas(double amount, Scania truck){
-        if(bedAngle == 0 && isTruckBedAngleValid(truck)) {
-            gas(amount);
-        }
+    private void setBedAngle(int angle) {
+        if (this.getCurrentSpeed() == 0 && isBedAngleValid(angle))
+            this.bedAngle = angle;
     }
 
-
-
     @Override
-    public double speedFactor(){
+    public double speedFactor() {
         return enginePower * 0.01;
     }
 
-    public void setBedAngle(int angle) {
-        this.bedAngle = angle;
+    public void gas(double amount) {
+        if(this.bedAngle == lowestBedAngle) {
+            super.gas(amount);
+        }
     }
+
 
     public int getBedAngle() {
         return this.bedAngle;
     }
 
-
-    public boolean isTruckBedAngleValid(Scania truck) {
-        return truck != null && lowestBedAngle <= truck.getBedAngle() && truck.getBedAngle() <= highestBedAngle;
+    public void higherBed() {
+        int newAngle = this.getBedAngle() + 1;
+        if (newAngle <= highestBedAngle) {
+            this.setBedAngle(newAngle);
+        }
     }
 
+    public void lowerBed() {
+        int newAngle = this.getBedAngle() - 1;
+        if (newAngle >= lowestBedAngle) {
+            this.setBedAngle(newAngle);
+        }
+    }
 
+    private boolean isBedAngleValid(int angle) {
+        return angle >= lowestBedAngle && angle <= highestBedAngle;
+    }
 
 }
