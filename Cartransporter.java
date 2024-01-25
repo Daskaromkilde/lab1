@@ -85,9 +85,8 @@ public class Cartransporter extends Car implements iTruckBed{
 
 
 
-    public boolean inRange(Point p)
-    {
-            return Math.abs(p.x - position.x) > inRangeUnit &&  Math.abs(p.y - position.y) > inRangeUnit;
+    public boolean inRange(Point p) {
+            return Math.abs(p.x - getPosition().x) < inRangeUnit &&  Math.abs(p.y - getPosition().y) < inRangeUnit;
     }
 
 }
