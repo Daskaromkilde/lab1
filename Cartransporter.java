@@ -4,9 +4,9 @@ import java.awt.*;
 import java.util.Stack;
 
 
-public class Cartransporter extends Car implements iTruckBed{
-    protected Stack<Car> loadedCars = new Stack<>();
-    private Car car;
+public class Cartransporter extends Car {
+    protected ArrayList<Car> loadedCars = new ArrayList<>();
+    //private Car car;
     private boolean carConnected;
     private boolean rampDown;
     protected final int inRangeUnit = 5;
@@ -20,7 +20,7 @@ public class Cartransporter extends Car implements iTruckBed{
     public double speedFactor() {
         return enginePower * 0.01;
     }
-
+    @Override
     public void gas(double amount) { // only gas if ramp is up
         if(!this.rampDown) {
             super.gas(amount);
@@ -38,24 +38,36 @@ public class Cartransporter extends Car implements iTruckBed{
             throw new IllegalArgumentException("Car is too heavy");
         }
         c.transporter(this);
-        loadedCars.push(c);
+        loadedCars.add(c);
     }
 
-    public Car findCar(String ModelName) {
+    public Car findAndRemoveCar(String ModelName) {
         int size = loadedCars.size();
 
         for (int i = 0; i < size; i++) {
           if (loadedCars.get(i).getModelName().equals(ModelName)) {
-              return loadedCars.get(i);
+              Car ca = loadedCars.get(i);
+              ca.setPosition(new Point(getPosition().x + inRangeUnit/2, getPosition().y + inRangeUnit/2));
+              ca.transporter(null);
+              return loadedCars.remove(i);
           }
         }
         throw new IllegalArgumentException("car dosen't exists in ramp");
     }
 
-    public void removeCar(Car c) {
-        if(!rampDown) {
+    public void removeLastCar(Car c) {
+        if (!rampDown) {
             throw new IllegalArgumentException("cant add car if ramp not lowered");
         }
+
+        int i = loadedCars.size()-1;
+        Car ca = loadedCars.get(i);
+        ca.setPosition(new Point(getPosition().x + inRangeUnit/2, getPosition().y + inRangeUnit/2));
+        ca.transporter(null);
+        loadedCars.remove(i);
+
+    }
+/*
 
         Stack<Car> carpoped = new Stack<>();
         int size = loadedCars.size();
@@ -73,6 +85,7 @@ public class Cartransporter extends Car implements iTruckBed{
             loadedCars.push(carpoped.pop());
         }
     }
+*/
 
 
     public void setRampDown(boolean b) {

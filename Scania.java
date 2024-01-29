@@ -1,11 +1,11 @@
 import java.awt.*;
-public class Scania extends Car implements iTruckBed{
+public class Scania extends Car{
     private final static int lowestBedAngle = 0;
     private final static int highestBedAngle = 70;
     private int bedAngle;
 
     public Scania() {
-        super(2, 125, Color.BLUE, "Scania", 3.6, 102);
+        super(2, 125, Color.BLUE, "Scania", 3.6);
         setBedAngle(lowestBedAngle);
     }
 
@@ -21,6 +21,7 @@ public class Scania extends Car implements iTruckBed{
     }
 
 
+    @Override
     public void gas(double amount) {
         if(this.bedAngle == lowestBedAngle) {
             super.gas(amount);
