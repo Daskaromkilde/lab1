@@ -1,0 +1,23 @@
+Index: Test/CarTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import org.junit.jupiter.api.Test;\r\nimport org.junit.jupiter.api.BeforeAll;\r\n\r\nimport static org.junit.jupiter.api.Assertions.*;\r\n\r\nclass CarTest {\r\n\r\n    @Test\r\n    void performAction() {\r\n    }\r\n\r\n    @Test\r\n    void getPosition() {\r\n    }\r\n\r\n    @Test\r\n    void setPosition() {\r\n    }\r\n\r\n    @Test\r\n    void getModelName() {\r\n    }\r\n\r\n    @Test\r\n    void getTurbo() {\r\n    }\r\n\r\n    @Test\r\n    void setCurrentSpeed() {\r\n    }\r\n\r\n    @Test\r\n    void setNrDoors() {\r\n    }\r\n\r\n    @Test\r\n    void setEnginePower() {\r\n    }\r\n\r\n    @Test\r\n    void setModelName() {\r\n    }\r\n\r\n    @Test\r\n    void getNrDoors() {\r\n    }\r\n\r\n    @Test\r\n    void getEnginePower() {\r\n    }\r\n\r\n    @Test\r\n    void getCurrentSpeed() {\r\n    }\r\n\r\n    @Test\r\n    void getColor() {\r\n    }\r\n\r\n    @Test\r\n    void setColor() {\r\n    }\r\n\r\n    @Test\r\n    void startEngine() {\r\n    }\r\n\r\n    @Test\r\n    void stopEngine() {\r\n    }\r\n\r\n    @Test\r\n    void setTurboOn() {\r\n    }\r\n\r\n    @Test\r\n    void setTurboOff() {\r\n    }\r\n\r\n    @Test\r\n    void incrementSpeed() {\r\n    }\r\n\r\n    @Test\r\n    void decrementSpeed() {\r\n    }\r\n\r\n    @Test\r\n    void gas() {\r\n        Volvo240 v = new Volvo240();\r\n        double c = v.getCurrentSpeed();\r\n        v.gas(0.25);\r\n        assertTrue(c < v.getCurrentSpeed());\r\n\r\n    }\r\n\r\n    @Test\r\n    void brake() {\r\n        Volvo240 v = new Volvo240();\r\n        v.gas(0.25);\r\n        double c = v.getCurrentSpeed();\r\n        v.brake(0.25);\r\n        assertTrue(c > v.getCurrentSpeed());\r\n    }\r\n\r\n    @Test\r\n    void move() {\r\n    }\r\n\r\n    @Test\r\n    void turnLeft() {\r\n        Volvo240 car = new Volvo240();\r\n        car.setDirection(eDirection.WEST);\r\n\r\n        car.turnLeft();\r\n\r\n        assertEquals(eDirection.SOUTH, car.getDirection(), \"When west, result==south\");\r\n\r\n\r\n    }\r\n\r\n    @Test\r\n    void turnRight() {\r\n        Saab95 car = new Saab95();\r\n        car.setDirection(eDirection.NORTH);\r\n        car.turnRight();\r\n        assertEquals(eDirection.EAST, car.getDirection(), \"When north, result==east\");\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Test/CarTest.java b/Test/CarTest.java
+--- a/Test/CarTest.java	(revision e2902e727d60e4845f02435061c0b4425468a5db)
++++ b/Test/CarTest.java	(date 1706016265958)
+@@ -111,12 +111,8 @@
+     void turnLeft() {
+         Volvo240 car = new Volvo240();
+         car.setDirection(eDirection.WEST);
+-
+         car.turnLeft();
+-
+         assertEquals(eDirection.SOUTH, car.getDirection(), "When west, result==south");
+-
+-
+     }
+ 
+     @Test
