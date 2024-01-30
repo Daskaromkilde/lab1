@@ -11,7 +11,7 @@ public class VolvoWorkshop implements iCarWorkshop<Volvo240> {
             if (car instanceof Volvo240) {
                 carsInService.add(car);
             } else {
-                throw new IllegalArgumentException("Wrong car");
+                throw new IllegalArgumentException("Wrong car type");
             }
         } else {
             throw new IllegalArgumentException("Workshop is full");
@@ -26,7 +26,4 @@ public class VolvoWorkshop implements iCarWorkshop<Volvo240> {
             }
         } throw new IllegalArgumentException("No car found with given modelName");
     }
-
-
-
 }

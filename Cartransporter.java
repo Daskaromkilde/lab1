@@ -14,7 +14,7 @@ public class Cartransporter extends Car {
     private final double maxWeightPerCar = 2.5;
 
     public Cartransporter() {
-        super(2, 125, Color.RED, "TruckTransportingCars", 5.7, 104);
+        super(2, 125, Color.RED, "TruckTransportingCars", 5.7);
     }
 
     public double speedFactor() {

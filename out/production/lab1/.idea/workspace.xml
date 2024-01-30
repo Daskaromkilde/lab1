@@ -4,26 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="927e760e-ee34-431f-8247-380566780540" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Test/CarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/CarTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/lab1.iml" afterDir="false" />
+    <list default="true" id="927e760e-ee34-431f-8247-380566780540" name="Changes" comment="Workshop updated">
+      <change afterPath="$PROJECT_DIR$/gamelooptest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaSwingTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/AnyCarWorkshopTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/AnyCarWorkshopTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/VolvoWorkshopTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/VolvoWorkshopTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iCarWorkshop.java" beforeDir="false" afterPath="$PROJECT_DIR$/iCarWorkshop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab1/Car$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/Car$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab1/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/Car.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab1/Cartransporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/Cartransporter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab1/Saab95.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/Saab95.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab1/Scania.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/Scania.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab1/Volvo240.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/Volvo240.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CoverageOptionsProvider">
-    <option name="myAddOrReplace" value="0" />
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="lab1" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -33,13 +45,16 @@
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
-        <option name="accountId" value="6ba6584d-698f-43db-b3b0-ce2d4216ea5e" />
+        <option name="accountId" value="33ff060f-bc16-4f8b-8d0f-ccd5992275b6" />
         <option name="url" value="https://github.com/Daskaromkilde/lab1.git" />
       </UrlAndAccount>
     </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -55,7 +70,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Downloaded.Files.Path.Enabled": "false",
-    "JUnit.CarTest.executor": "Coverage",
+    "JUnit.AnyCarWorkshopTest.executor": "Coverage",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
@@ -68,12 +83,13 @@
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "corretto-17",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Damkilde/Documents/School/JAVA/Projects/Lab/Ants distribution del2 - g46",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
@@ -120,6 +136,19 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <method v="2" />
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="labb1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="labb1" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -136,15 +165,128 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1705856865194</updated>
-      <workItem from="1706024595882" duration="15000" />
-      <workItem from="1706024614460" duration="1480000" />
+      <workItem from="1706217910616" duration="5640000" />
+      <workItem from="1706610273492" duration="394000" />
     </task>
+    <task id="LOCAL-00001" summary="Added:&#10;move&#10;turnLeft&#10;turnRight&#10;testcases for aforementioned">
+      <option name="closed" value="true" />
+      <created>1705862404276</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1705862404276</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added:&#10;move&#10;turnLeft&#10;turnRight&#10;testcases for aforementioned">
+      <option name="closed" value="true" />
+      <created>1705862423126</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1705862423126</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added:&#10;move&#10;turnLeft&#10;turnRight&#10;testcases for aforementioned">
+      <option name="closed" value="true" />
+      <created>1705862609260</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1705862609260</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added constructors">
+      <option name="closed" value="true" />
+      <created>1705932093332</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1705932093333</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added all test cases">
+      <option name="closed" value="true" />
+      <created>1706017487113</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1706017487113</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added all test cases">
+      <option name="closed" value="true" />
+      <created>1706017666243</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1706017666243</updated>
+    </task>
+    <task id="LOCAL-00007" summary="lab1 godkänd">
+      <option name="closed" value="true" />
+      <created>1706178441933</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1706178441933</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Scania ok &amp; 1 test case">
+      <option name="closed" value="true" />
+      <created>1706181085682</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1706181085682</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Scania ok &amp; 1 test case">
+      <option name="closed" value="true" />
+      <created>1706181399794</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1706181399794</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Workshop updated">
+      <option name="closed" value="true" />
+      <created>1706223475326</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1706223475326</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added:&#10;move&#10;turnLeft&#10;turnRight&#10;testcases for aforementioned" />
+    <MESSAGE value="added constructors" />
+    <MESSAGE value="added all test cases" />
+    <MESSAGE value="lab1 godkänd" />
+    <MESSAGE value="Scania ok &amp; 1 test case" />
+    <MESSAGE value="Workshop updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Workshop updated" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Test/ScaniaTest.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/labb1$CarTest.ic" NAME="CarTest Coverage Results" MODIFIED="1706025652608" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/labb1$CarTest.ic" NAME="CarTest Coverage Results" MODIFIED="1706106815672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/labb1$ScaniaTest.ic" NAME="ScaniaTest Coverage Results" MODIFIED="1706181051120" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

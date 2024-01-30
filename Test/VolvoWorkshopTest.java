@@ -11,15 +11,16 @@ class VolvoWorkshopTest {
     @Test
     void workshopIsFullTryToAdd() {
         Volvo240 volvo = new Volvo240();
-        carsInService.add(volvo);
-        carsInService.add(volvo);
-        carsInService.add(volvo);
-        carsInService.add(volvo);
+        VolvoWorkshop v = new VolvoWorkshop();
+        v.takeInCar(volvo);
+        v.takeInCar(volvo);
+        v.takeInCar(volvo);
+        v.takeInCar(volvo);
+        v.takeInCar(volvo);
 
         try {
-            carsInService.add(volvo);
+            v.takeInCar(volvo);
         }catch (IllegalArgumentException ignored) {
-        assertTrue(true);
         }
 
 

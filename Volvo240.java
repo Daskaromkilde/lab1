@@ -6,7 +6,7 @@ public class Volvo240 extends Car{
 
 
     public Volvo240(){
-        super(4, 100, Color.black, "Volvo240", 1.9, 103);
+        super(4, 100, Color.black, "Volvo240", 1.9);
     }
 
 
