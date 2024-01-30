@@ -1,0 +1,19 @@
+<changelist name="Uncommitted_changes_before_Update_at_2024-01-30_13_23_[Changes]" date="1706617395748" recycled="false" toDelete="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-01-30_13_23_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 2024-01-30 13:23 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/lab1/Cartransporter.class" />
+    <option name="AFTER_PATH" value="out/production/lab1/Cartransporter.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-01-30_13_23_[Changes]/Cartransporter.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/lab1/Car.class" />
+    <option name="AFTER_PATH" value="out/production/lab1/Car.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-01-30_13_23_[Changes]/Car.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/lab1/Car$1.class" />
+    <option name="AFTER_PATH" value="out/production/lab1/Car$1.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-01-30_13_23_[Changes]/Car$1.class" />
+  </binary>
+</changelist>
