@@ -1,0 +1,96 @@
+Index: Saab95.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.awt.*;\r\n\r\npublic class Saab95 extends Car implements iTurbo {\r\n\r\n    protected boolean turboOn;\r\n\r\n    public Saab95(){\r\n        super(2, 125, Color.red, \"Saab95\", 1.9, 101);\r\n    }\r\n\r\n\r\n    @Override\r\n    public double speedFactor(){\r\n        double turbo = 1;\r\n        if(turboOn){\r\n            turbo = 1.3;\r\n        }\r\n        return enginePower * 0.01 * turbo;\r\n    }\r\n\r\n    @Override\r\n    public void setTurbo(boolean b) {\r\n        turboOn = b;\r\n    }\r\n\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Saab95.java b/Saab95.java
+--- a/Saab95.java	(revision 1ad93e7c1184657b6c50797192829971b24259e8)
++++ b/Saab95.java	(date 1706283087294)
+@@ -5,7 +5,7 @@
+     protected boolean turboOn;
+ 
+     public Saab95(){
+-        super(2, 125, Color.red, "Saab95", 1.9, 101);
++        super(2, 125, Color.red, "Saab95", 1.9);
+     }
+ 
+ 
+Index: Volvo240.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.awt.*;\r\n\r\npublic class Volvo240 extends Car{\r\n    final static double trimFactor = 1.25;\r\n\r\n\r\n\r\n    public Volvo240(){\r\n        super(4, 100, Color.black, \"Volvo240\", 1.9, 103);\r\n    }\r\n\r\n\r\n    @Override\r\n    public double speedFactor(){\r\n        return enginePower * 0.01 * trimFactor;\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Volvo240.java b/Volvo240.java
+--- a/Volvo240.java	(revision 1ad93e7c1184657b6c50797192829971b24259e8)
++++ b/Volvo240.java	(date 1706283087398)
+@@ -6,7 +6,7 @@
+ 
+ 
+     public Volvo240(){
+-        super(4, 100, Color.black, "Volvo240", 1.9, 103);
++        super(4, 100, Color.black, "Volvo240", 1.9);
+     }
+ 
+ 
+Index: Car.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.awt.*;\r\n\r\npublic abstract class Car implements iCar, iMovable {\r\n\r\n\r\n    private int nrDoors; // Number of doors on the car\r\n    protected double enginePower; // Engine power of the car\r\n    private double currentSpeed; // The current speed of the car\r\n    private Color color; // Color of the car\r\n    private String modelName; // The car model name\r\n    //private boolean turboOn;\r\n    private Point position;\r\n    private eDirection direction;\r\n    private Cartransporter cartransporter; // if null then not on transport\r\n    protected double weight;\r\n    protected int carID;\r\n\r\n    public Car(int nrDoors, double enginePower, Color color, String modelName, double weight, int carID) {\r\n        this.carID = carID;\r\n        this.nrDoors = nrDoors;\r\n        this.enginePower = enginePower;\r\n        this.color = color;\r\n        this.modelName = modelName;\r\n        this.weight = weight; // in tons\r\n        this.position = new Point(0,0);  // The initial starting position of the car\r\n        this.direction = eDirection.EAST; // The initial facing of the car\r\n        stopEngine();\r\n        this.setPosition(this.position);\r\n    }\r\n\r\n\r\n    public eDirection getDirection() {\r\n        return direction;\r\n    }\r\n\r\n    public void setDirection(eDirection direction) {\r\n        this.direction = direction;\r\n    }\r\n\r\n\r\n    public void transporter(Cartransporter c) {\r\n        cartransporter = c;\r\n    }\r\n\r\n    public Point getPosition() {\r\n        if (cartransporter != null) {\r\n        return cartransporter.getPosition();\r\n        }\r\n        return new Point(this.position);\r\n    }\r\n\r\n    public void setPosition(Point position) {\r\n        this.position = new Point(position);\r\n    }\r\n\r\n    public String getModelName() {\r\n        return modelName;\r\n    }\r\n\r\n\r\n    public void setCurrentSpeed(double amount) {\r\n        currentSpeed = amount;\r\n    }\r\n    public void setNrDoors(int amount){\r\n        nrDoors = amount;\r\n    }\r\n\r\n    public void setModelName(String name) {\r\n        modelName = name;\r\n    }\r\n    public int getNrDoors(){\r\n        return nrDoors;\r\n    }\r\n\r\n\r\n    public double getCurrentSpeed(){\r\n        return currentSpeed;\r\n    }\r\n\r\n    public Color getColor(){\r\n        return color;\r\n    }\r\n\r\n    public void setColor(Color clr) {\r\n        color = clr;\r\n    }\r\n\r\n    public void startEngine(){\r\n        currentSpeed = 0.1;\r\n    }\r\n\r\n    public void stopEngine(){\r\n        currentSpeed = 0;\r\n    }\r\n\r\n\r\n\r\n    public void incrementSpeed(double amount){\r\n        if(getCurrentSpeed() + speedFactor() * amount <= enginePower\r\n                && getCurrentSpeed() + speedFactor() * amount > 0\r\n                && speedFactor() * amount >= 0) {\r\n            setCurrentSpeed(Math.min(getCurrentSpeed() + speedFactor() * amount, enginePower));\r\n        }\r\n    }\r\n\r\n    public void decrementSpeed(double amount){\r\n        if (amount * speedFactor() >= 0) {\r\n            setCurrentSpeed(Math.max(getCurrentSpeed() - speedFactor() * amount, 0));\r\n        }\r\n    }\r\n\r\n    public abstract double speedFactor();\r\n\r\n\r\n\r\n    public void gas(double amount){\r\n        if (amount > 0 && amount <= 1) {\r\n            incrementSpeed(amount);\r\n        }else {\r\n            throw new IllegalArgumentException(\"invalid amount of acceleration\");\r\n        }\r\n    }\r\n\r\n    public void brake(double amount) {\r\n        if (amount > 0 && amount <= 1) {\r\n            decrementSpeed(amount);\r\n        }else\r\n        {\r\n            throw new IllegalArgumentException(\"invalid amount of brake force\");\r\n        }\r\n    }\r\n\r\n\r\n\r\n\r\n\r\n    // Updates the movement in the direction the cars facing\r\n    public void move(eDirection facing) {\r\n        switch (facing) {\r\n            case WEST: // GOING LEFT\r\n                position.x -= (int) currentSpeed;\r\n                break;\r\n            case NORTH: // GOING UP\r\n                position.y += (int) currentSpeed;\r\n                break;\r\n            case EAST: // GOING RIGHT\r\n                position.x += (int) currentSpeed;\r\n                break;\r\n            case SOUTH: // GOING DOWN\r\n                position.y -= (int) currentSpeed;\r\n                break;\r\n        }\r\n    }\r\n\r\n\r\n\r\n    public void turnLeft() {\r\n            switch (this.direction ) {\r\n                case WEST:\r\n                    this.direction = eDirection.SOUTH;\r\n                    break;\r\n                case NORTH:\r\n                    this.direction = eDirection.WEST;\r\n                    break;\r\n                case EAST:\r\n                    this.direction = eDirection.NORTH;\r\n                    break;\r\n                case SOUTH:\r\n                    this.direction = eDirection.EAST;\r\n                    break;\r\n            }\r\n        }\r\n\r\n\r\n\r\n    public void turnRight() {\r\n        switch (this.direction) {\r\n            case WEST:\r\n                this.direction = eDirection.NORTH;\r\n                break;\r\n            case NORTH:\r\n                this.direction = eDirection.EAST;\r\n                break;\r\n            case EAST:\r\n                this.direction = eDirection.SOUTH;\r\n                break;\r\n            case SOUTH:\r\n                this.direction = eDirection.WEST;\r\n                break;\r\n        }\r\n    }\r\n\r\n\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Car.java b/Car.java
+--- a/Car.java	(revision 1ad93e7c1184657b6c50797192829971b24259e8)
++++ b/Car.java	(date 1706283087362)
+@@ -13,10 +13,9 @@
+     private eDirection direction;
+     private Cartransporter cartransporter; // if null then not on transport
+     protected double weight;
+-    protected int carID;
+ 
+-    public Car(int nrDoors, double enginePower, Color color, String modelName, double weight, int carID) {
+-        this.carID = carID;
++
++    public Car(int nrDoors, double enginePower, Color color, String modelName, double weight) {
+         this.nrDoors = nrDoors;
+         this.enginePower = enginePower;
+         this.color = color;
+Index: Cartransporter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.util.ArrayList;\r\nimport java.util.List;\r\nimport java.awt.*;\r\nimport java.util.Stack;\r\n\r\n\r\npublic class Cartransporter extends Car implements iTruckBed{\r\n    protected Stack<Car> loadedCars = new Stack<>();\r\n    private Car car;\r\n    private boolean carConnected;\r\n    private boolean rampDown;\r\n    protected final int inRangeUnit = 5;\r\n    private final int maxLoadedCars = 5;\r\n    private final double maxWeightPerCar = 2.5;\r\n\r\n    public Cartransporter() {\r\n        super(2, 125, Color.RED, \"TruckTransportingCars\", 5.7, 104);\r\n    }\r\n\r\n    public double speedFactor() {\r\n        return enginePower * 0.01;\r\n    }\r\n\r\n    public void gas(double amount) { // only gas if ramp is up\r\n        if(!this.rampDown) {\r\n            super.gas(amount);\r\n        }\r\n    }\r\n\r\n    public void addCar(Car c) {\r\n        if(!rampDown || !inRange(c.getPosition())) {\r\n            throw new IllegalArgumentException(\"cant add car if ramp not lowered or car not in range\");\r\n        } if (c instanceof Cartransporter) {\r\n            throw new IllegalArgumentException(\"cant add a car transporter\");\r\n        } if (loadedCars.size() >= maxLoadedCars) {\r\n            throw new IllegalArgumentException(\"Cant add car. Transporter is full.\");\r\n        } if (c.weight > maxWeightPerCar) {\r\n            throw new IllegalArgumentException(\"Car is too heavy\");\r\n        }\r\n        c.transporter(this);\r\n        loadedCars.push(c);\r\n    }\r\n\r\n    public Car findCar(String ModelName) {\r\n        int size = loadedCars.size();\r\n\r\n        for (int i = 0; i < size; i++) {\r\n          if (loadedCars.get(i).getModelName().equals(ModelName)) {\r\n              return loadedCars.get(i);\r\n          }\r\n        }\r\n        throw new IllegalArgumentException(\"car dosen't exists in ramp\");\r\n    }\r\n\r\n    public void removeCar(Car c) {\r\n        if(!rampDown) {\r\n            throw new IllegalArgumentException(\"cant add car if ramp not lowered\");\r\n        }\r\n\r\n        Stack<Car> carpoped = new Stack<>();\r\n        int size = loadedCars.size();\r\n\r\n        for (int i = 0; i < size; i++) {\r\n          Car pop = loadedCars.pop();\r\n          if (pop.equals(c)) {\r\n              pop.setPosition(new Point(getPosition().x + inRangeUnit/2, getPosition().y + inRangeUnit/2));\r\n              pop.transporter(null);\r\n              break;\r\n          }\r\n          carpoped.push(pop);\r\n        }\r\n        for (int i = 0; i < carpoped.size(); i++) {\r\n            loadedCars.push(carpoped.pop());\r\n        }\r\n    }\r\n\r\n\r\n    public void setRampDown(boolean b) {\r\n        if (this.getCurrentSpeed() == 0) {\r\n            this.rampDown = b;\r\n        }\r\n    }\r\n\r\n    public boolean getRampDown() {\r\n        return this.rampDown;\r\n    }\r\n\r\n\r\n\r\n    public boolean inRange(Point p) {\r\n            return Math.abs(p.x - getPosition().x) < inRangeUnit &&  Math.abs(p.y - getPosition().y) < inRangeUnit;\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Cartransporter.java b/Cartransporter.java
+--- a/Cartransporter.java	(revision 1ad93e7c1184657b6c50797192829971b24259e8)
++++ b/Cartransporter.java	(date 1706283087348)
+@@ -14,7 +14,7 @@
+     private final double maxWeightPerCar = 2.5;
+ 
+     public Cartransporter() {
+-        super(2, 125, Color.RED, "TruckTransportingCars", 5.7, 104);
++        super(2, 125, Color.RED, "TruckTransportingCars", 5.7);
+     }
+ 
+     public double speedFactor() {
+Index: iCarWorkshop.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>public interface iCarWorkshop<C extends Car> {\r\n    void takeInCar(C car);\r\n    C returnCar(int x);\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/iCarWorkshop.java b/iCarWorkshop.java
+--- a/iCarWorkshop.java	(revision 1ad93e7c1184657b6c50797192829971b24259e8)
++++ b/iCarWorkshop.java	(date 1706282857305)
+@@ -1,4 +1,4 @@
+ public interface iCarWorkshop<C extends Car> {
+     void takeInCar(C car);
+-    C returnCar(int x);
++    C returnCar(String ModelName);
+ }
