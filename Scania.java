@@ -1,5 +1,5 @@
 import java.awt.*;
-public class Scania extends Car{
+public class Scania extends Car implements iTruckbed{
     private final static int lowestBedAngle = 0;
     private final static int highestBedAngle = 70;
     private int bedAngle;
@@ -10,9 +10,10 @@ public class Scania extends Car{
     }
 
 
-    private void setBedAngle(int angle) {
-        if (this.getCurrentSpeed() == 0 && isBedAngleValid(angle))
+    public void setBedAngle(int angle) {
+        if (this.getCurrentSpeed() == 0 && isBedAngleValid(angle)) {
             this.bedAngle = angle;
+        }
     }
 
 
@@ -33,6 +34,7 @@ public class Scania extends Car{
         return this.bedAngle;
     }
 
+    @Override
     public void higherBed() {
         int newAngle = this.getBedAngle() + 1;
         if (newAngle <= highestBedAngle) {
@@ -40,6 +42,7 @@ public class Scania extends Car{
         }
     }
 
+    @Override
     public void lowerBed() {
         int newAngle = this.getBedAngle() - 1;
         if (newAngle >= lowestBedAngle) {

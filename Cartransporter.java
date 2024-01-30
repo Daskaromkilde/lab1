@@ -1,13 +1,9 @@
 import java.util.ArrayList;
-import java.util.List;
 import java.awt.*;
-import java.util.Stack;
 
 
-public class Cartransporter extends Car {
+public class Cartransporter extends Car implements iTruckbed{
     protected ArrayList<Car> loadedCars = new ArrayList<>();
-    //private Car car;
-    private boolean carConnected;
     private boolean rampDown;
     protected final int inRangeUnit = 5;
     private final int maxLoadedCars = 5;
@@ -20,12 +16,25 @@ public class Cartransporter extends Car {
     public double speedFactor() {
         return enginePower * 0.01;
     }
+
+
     @Override
     public void gas(double amount) { // only gas if ramp is up
         if(!this.rampDown) {
             super.gas(amount);
         }
     }
+
+    @Override
+    public void lowerBed(){
+        rampDown = true;
+    }
+
+    @Override
+    public void higherBed() {
+        rampDown = false;
+    }
+
 
     public void addCar(Car c) {
         if(!rampDown || !inRange(c.getPosition())) {
@@ -55,26 +64,19 @@ public class Cartransporter extends Car {
         throw new IllegalArgumentException("car dosen't exists in ramp");
     }
 
-    public Car findAndRemoveSpecificCar(String ModelName) {
-        int size = loadedCars.size();
-
-        for (int i = 0; i < size; i++) {
-          if (loadedCars.get(i).getModelName().equals(ModelName)) {
-              Car car = loadedCars.get(i);
-              car.setPosition(new Point(getPosition().x + inRangeUnit/2, getPosition().y + inRangeUnit/2));
-              car.transporter(null);
-              return loadedCars.remove(i);
-          }
+    public void removeLastCar() {
+        if (!rampDown) {
+            throw new IllegalArgumentException("cant add car if ramp not lowered");
         }
-        throw new IllegalArgumentException("car dosen't exists in ramp");
+
+        Car lastCar = loadedCars.get(loadedCars.size()-1);
+        lastCar.setPosition(new Point(getPosition().x + inRangeUnit/2, getPosition().y + inRangeUnit/2));
+        lastCar.transporter(null);
+        loadedCars.remove(lastCar);
+
+
     }
 
-
-    public void setRampDown(boolean b) {
-        if (this.getCurrentSpeed() == 0) {
-            this.rampDown = b;
-        }
-    }
 
     public boolean getRampDown() {
         return this.rampDown;

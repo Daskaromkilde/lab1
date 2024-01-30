@@ -1,4 +1,4 @@
-public interface iCarWorkshop<C extends Car> {
-    void takeInCar(C car);
-    C returnCar(String modelName);
+public interface iCarWorkshop {
+    void takeInCar(Car car);
+    Car returnCar(String modelName);
 }

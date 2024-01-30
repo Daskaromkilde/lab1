@@ -17,7 +17,7 @@ class CartransporterTest {
         t.setPosition(new Point(0,0));
         Saab95 s = new Saab95();
         s.setPosition(new Point(0,0));
-        t.setRampDown(true);
+        t.lowerBed();
         t.addCar(v);
         t.addCar(s);
         try
@@ -65,7 +65,7 @@ class CartransporterTest {
         Cartransporter t = new Cartransporter();
         Volvo240 v = new Volvo240();
         Saab95 s = new Saab95();
-        t.setRampDown(true);
+        t.lowerBed();
 
         t.addCar(v);
         t.addCar(s);
@@ -86,7 +86,7 @@ class CartransporterTest {
     void samePosition () {
         Cartransporter t = new Cartransporter();
         Volvo240 v = new Volvo240();
-        t.setRampDown(true);
+        t.lowerBed();
         v.setPosition(new Point(96,200));
         t.setPosition(new Point(100,200));
         v.transporter(t);
@@ -106,7 +106,7 @@ class CartransporterTest {
         Cartransporter t = new Cartransporter();
         Volvo240 v = new Volvo240();
         Saab95 s = new Saab95();
-        t.setRampDown(true);
+        t.lowerBed();
 
         t.addCar(v);
         t.addCar(s);
@@ -123,7 +123,7 @@ class CartransporterTest {
     void inRange() {
         Cartransporter t = new Cartransporter();
         Volvo240 v = new Volvo240();
-        t.setRampDown(true);
+        t.lowerBed();
 
         t.setPosition(new Point(0,0));
         v.setPosition(new Point(0,0));
