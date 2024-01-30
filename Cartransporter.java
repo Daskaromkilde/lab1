@@ -41,51 +41,32 @@ public class Cartransporter extends Car {
         loadedCars.add(c);
     }
 
-    public Car findAndRemoveCar(String ModelName) {
+    public Car findAndRemoveSpecificCar(String ModelName) {
         int size = loadedCars.size();
 
         for (int i = 0; i < size; i++) {
           if (loadedCars.get(i).getModelName().equals(ModelName)) {
-              Car ca = loadedCars.get(i);
-              ca.setPosition(new Point(getPosition().x + inRangeUnit/2, getPosition().y + inRangeUnit/2));
-              ca.transporter(null);
+              Car car = loadedCars.get(i);
+              car.setPosition(new Point(getPosition().x + inRangeUnit/2, getPosition().y + inRangeUnit/2));
+              car.transporter(null);
               return loadedCars.remove(i);
           }
         }
         throw new IllegalArgumentException("car dosen't exists in ramp");
     }
 
-    public void removeLastCar(Car c) {
+    public void removeLastCar() {
         if (!rampDown) {
             throw new IllegalArgumentException("cant add car if ramp not lowered");
         }
 
-        int i = loadedCars.size()-1;
-        Car ca = loadedCars.get(i);
-        ca.setPosition(new Point(getPosition().x + inRangeUnit/2, getPosition().y + inRangeUnit/2));
-        ca.transporter(null);
-        loadedCars.remove(i);
+        Car lastCar = loadedCars.getLast();
+        lastCar.setPosition(new Point(getPosition().x + inRangeUnit/2, getPosition().y + inRangeUnit/2));
+        lastCar.transporter(null);
+        loadedCars.removeLast();
+
 
     }
-/*
-
-        Stack<Car> carpoped = new Stack<>();
-        int size = loadedCars.size();
-
-        for (int i = 0; i < size; i++) {
-          Car pop = loadedCars.pop();
-          if (pop.equals(c)) {
-              pop.setPosition(new Point(getPosition().x + inRangeUnit/2, getPosition().y + inRangeUnit/2));
-              pop.transporter(null);
-              break;
-          }
-          carpoped.push(pop);
-        }
-        for (int i = 0; i < carpoped.size(); i++) {
-            loadedCars.push(carpoped.pop());
-        }
-    }
-*/
 
 
     public void setRampDown(boolean b) {

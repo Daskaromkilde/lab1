@@ -23,8 +23,8 @@ class CartransporterTest {
         try
         {
             assertTrue(t.loadedCars.size() == 2);
-            assertEquals(t.findAndRemoveCar(v.getModelName()), v);
-            assertEquals(t.findAndRemoveCar(s.getModelName()), s);
+            assertEquals(t.findAndRemoveSpecificCar(v.getModelName()), v);
+            assertEquals(t.findAndRemoveSpecificCar(s.getModelName()), s);
         } catch (IllegalArgumentException ignored)
         {
             assertTrue(false);
@@ -70,13 +70,13 @@ class CartransporterTest {
         t.addCar(v);
         t.addCar(s);
 
-        assertEquals(t.findAndRemoveCar(v.getModelName()), v);
-        assertEquals(t.findAndRemoveCar(s.getModelName()), s);
+        assertEquals(t.findAndRemoveSpecificCar(v.getModelName()), v);
+        assertEquals(t.findAndRemoveSpecificCar(s.getModelName()), s);
 
 
         try {
-            t.findAndRemoveCar(v.getModelName());
-            t.findAndRemoveCar(s.getModelName());
+            t.findAndRemoveSpecificCar(v.getModelName());
+            t.findAndRemoveSpecificCar(s.getModelName());
         } catch (IllegalArgumentException ignored) {
             assertTrue(true);
         }
@@ -96,7 +96,7 @@ class CartransporterTest {
         Point y = v.getPosition();
         assertEquals(x, y);
 
-        t.findAndRemoveCar(v.getModelName());
+        t.findAndRemoveSpecificCar(v.getModelName());
         System.out.println(v.getPosition());
 
     }
@@ -110,8 +110,8 @@ class CartransporterTest {
 
         t.addCar(v);
         t.addCar(s);
-        t.removeLastCar(v);
-        t.removeLastCar(s);
+        t.removeLastCar();
+        t.removeLastCar();
 
         assertTrue(t.loadedCars.size() == 0);
         assertTrue(t.inRange(v.getPosition()));
