@@ -55,17 +55,18 @@ public class Cartransporter extends Car {
         throw new IllegalArgumentException("car dosen't exists in ramp");
     }
 
-    public void removeLastCar() {
-        if (!rampDown) {
-            throw new IllegalArgumentException("cant add car if ramp not lowered");
+    public Car findAndRemoveSpecificCar(String ModelName) {
+        int size = loadedCars.size();
+
+        for (int i = 0; i < size; i++) {
+          if (loadedCars.get(i).getModelName().equals(ModelName)) {
+              Car car = loadedCars.get(i);
+              car.setPosition(new Point(getPosition().x + inRangeUnit/2, getPosition().y + inRangeUnit/2));
+              car.transporter(null);
+              return loadedCars.remove(i);
+          }
         }
-
-        Car lastCar = loadedCars.getLast();
-        lastCar.setPosition(new Point(getPosition().x + inRangeUnit/2, getPosition().y + inRangeUnit/2));
-        lastCar.transporter(null);
-        loadedCars.removeLast();
-
-
+        throw new IllegalArgumentException("car dosen't exists in ramp");
     }
 
 
