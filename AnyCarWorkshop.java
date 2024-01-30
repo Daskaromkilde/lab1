@@ -2,8 +2,7 @@ import java.util.*;
 
 public class AnyCarWorkshop<C extends Car> implements iCarWorkshop<C> {
     private final int maxCars = 10;
-    private ArrayList<C> carsInService = new ArrayList<>(maxCars);
-
+    private final ArrayList<C> carsInService = new ArrayList<>(maxCars);
 
     @Override
     public void takeInCar(C car) {
@@ -11,7 +10,6 @@ public class AnyCarWorkshop<C extends Car> implements iCarWorkshop<C> {
             carsInService.add(car);
         } else throw new IllegalArgumentException("Workshop is full");
     }
-
 
     @Override
     public C returnCar(String ModelName) {
@@ -21,9 +19,6 @@ public class AnyCarWorkshop<C extends Car> implements iCarWorkshop<C> {
             }
         } throw new IllegalArgumentException("No car found with given modelName");
     }
-
-
-
 }
 
 

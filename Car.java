@@ -13,10 +13,9 @@ public abstract class Car implements iCar, iMovable {
     private eDirection direction;
     private Cartransporter cartransporter; // if null then not on transport
     protected double weight;
-    protected int carID;
 
-    public Car(int nrDoors, double enginePower, Color color, String modelName, double weight, int carID) {
-        this.carID = carID;
+
+    public Car(int nrDoors, double enginePower, Color color, String modelName, double weight) {
         this.nrDoors = nrDoors;
         this.enginePower = enginePower;
         this.color = color;

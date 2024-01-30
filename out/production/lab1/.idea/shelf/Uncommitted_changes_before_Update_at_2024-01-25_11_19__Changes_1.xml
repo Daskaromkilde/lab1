@@ -1,0 +1,24 @@
+<changelist name="Uncommitted_changes_before_Update_at_2024-01-25_11_19_[Changes]1" date="1706177989866" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-01-25_11_19_[Changes]1/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 2024-01-25 11:19 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/lab1/Saab95.class" />
+    <option name="AFTER_PATH" value="out/production/lab1/Saab95.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-01-25_11_19_[Changes]1/Saab95.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/lab1/Car$1.class" />
+    <option name="AFTER_PATH" value="out/production/lab1/Car$1.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-01-25_11_19_[Changes]1/Car$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/lab1/Car.class" />
+    <option name="AFTER_PATH" value="out/production/lab1/Car.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-01-25_11_19_[Changes]1/Car.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/lab1/Volvo240.class" />
+    <option name="AFTER_PATH" value="out/production/lab1/Volvo240.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-01-25_11_19_[Changes]1/Volvo240.class" />
+  </binary>
+</changelist>
