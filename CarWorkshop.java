@@ -1,31 +1,25 @@
 import java.util.*;
 
-public class CarWorkshop<C> implements iCarWorkshop {
+public class CarWorkshop<C extends Car> { //need to extend car because of THIS123
     private final int maxCars;
-    private final C carType;
-    private final ArrayList<Car> carsInService = new ArrayList<>();
 
-    public CarWorkshop(int maxCars, C c){
+    private final ArrayList<C> carsInService = new ArrayList<>();
 
+    public CarWorkshop(int maxCars){
         this.maxCars = maxCars;
-
-        this.carType = c;
     }
 
 
 
-
-    @Override
-    public void takeInCar(Car car) {
+    public void takeInCar(C c) {
         if (carsInService.size() < maxCars) {
-            carsInService.add(car);
+            carsInService.add(c);
         } else throw new IllegalArgumentException("Workshop is full");
     }
 
-    @Override
-    public Car returnCar(String ModelName) {
+    public C returnCar(String ModelName) {
         for (int i = 0; i < carsInService.size(); i++) {
-            if (carsInService.get(i).getModelName().equals(ModelName)) {
+            if (carsInService.get(i).getModelName().equals(ModelName)) { //getModel THIS123
                 return carsInService.get(i);
             }
         } throw new IllegalArgumentException("No car found with given modelName");
