@@ -9,7 +9,7 @@ class CarWorkshopTest {
 
         CarWorkshop<Saab95> saabworkshop = new CarWorkshop(5);
         saabworkshop.takeInCar(saab);
-//        saabworkshop.takeInCar(volvo); //static
+        saabworkshop.takeInCar(volvo); //static
 
     }
 
