@@ -16,7 +16,7 @@ class ScaniaTest {
     void gasWhenBedNotDown() {
         scania.higherBed();
         scania.gas(0.7);
-        assertNotEquals(0.875, scania.getCurrentSpeed());
+        assertTrue(scania.getCurrentSpeed() > 0);
     }
 
     @Test

@@ -15,7 +15,7 @@ public class Truck extends Car{
 
     @Override
     public void gas(double amount) {
-        if(rampDown) {
+        if(!rampDown) {
             super.gas(amount);
         }else
         {
@@ -36,7 +36,6 @@ public class Truck extends Car{
     public int getBedAngle() {
         return this.bedAngle;
     }
-
 
     public void higherBed(int highestBedAngle, int lowestBedAngle) {
         int newAngle = this.getBedAngle() + 1;
