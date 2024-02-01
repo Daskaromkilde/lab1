@@ -2,9 +2,8 @@ import java.util.ArrayList;
 import java.awt.*;
 
 
-public class Cartransporter extends Car implements iTruckbed{
+public class Cartransporter extends Truck {
     protected ArrayList<Car> loadedCars = new ArrayList<>();
-    private boolean rampDown;
     protected final int inRangeUnit = 5;
     private final int maxLoadedCars = 5;
     private final double maxWeightPerCar = 2.5;
@@ -13,27 +12,6 @@ public class Cartransporter extends Car implements iTruckbed{
         super(2, 125, Color.RED, "TruckTransportingCars", 5.7);
     }
 
-    public double speedFactor() {
-        return enginePower * 0.01;
-    }
-
-
-    @Override
-    public void gas(double amount) { // only gas if ramp is up
-        if(!this.rampDown) {
-            super.gas(amount);
-        }
-    }
-
-    @Override
-    public void lowerBed(){
-        rampDown = true;
-    }
-
-    @Override
-    public void higherBed() {
-        rampDown = false;
-    }
 
 
     public void addCar(Car c) {
@@ -76,13 +54,6 @@ public class Cartransporter extends Car implements iTruckbed{
 
 
     }
-
-
-    public boolean getRampDown() {
-        return this.rampDown;
-    }
-
-
 
     public boolean inRange(Point p) {
             return Math.abs(p.x - getPosition().x) < inRangeUnit &&  Math.abs(p.y - getPosition().y) < inRangeUnit;
