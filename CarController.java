@@ -3,6 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -79,20 +80,34 @@ public class CarController {
                 {
                     car.move(car.getDirection());
                 }
-
-                if (car.getPosition().x < frame.drawPanel.volvoWorkshopImage.getWidth() + frame.drawPanel.volvoWorkshopPoint.x &&
-                    car.getPosition().x > frame.drawPanel.volvoWorkshopPoint.x &&
-                        car.getPosition().y < frame.drawPanel.volvoWorkshopImage.getHeight() + frame.drawPanel.volvoWorkshopPoint.y &&
-                        car.getPosition().y > frame.drawPanel.volvoWorkshopPoint.y)
+            if(car instanceof Volvo240) {
+                if (workshopDetector ((Volvo240) car,carWorkshop, frame.drawPanel.volvoWorkshopImage, frame.drawPanel.volvoWorkshopPoint))
                 {
-//                        carWorkshop.takeInCar(car);
-
+                    break;
                 }
+            }
+
                 frame.drawPanel.moveit(x, y, car);
                 // repaint() calls the paintComponent method of the panel
                 frame.drawPanel.repaint();
             }
         }
+    }
+
+    private <T extends Car> boolean workshopDetector(T car, CarWorkshop<T> carWorkshop, BufferedImage image, Point point)
+    {
+        if (car.getPosition().x < image.getWidth() + point.x &&
+                car.getPosition().x > point.x &&
+                car.getPosition().y < image.getHeight() + point.y &&
+                car.getPosition().y >= point.y )
+        {
+            System.out.println("here");
+                carWorkshop.takeInCar(car); //hjälp
+                cars.remove(car);
+                point = new Point(-100, -100);
+                return true;
+        }
+        return false;
     }
 
     // Calls the gas method for each car once
