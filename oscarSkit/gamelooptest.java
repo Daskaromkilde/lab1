@@ -1,3 +1,5 @@
+package oscarSkit;
+
 import java.awt.*;
 
 public class gamelooptest implements Runnable {
@@ -57,7 +59,7 @@ public class gamelooptest implements Runnable {
     }
 
     private void tick() {
-        // Assuming you have a car object and a reference to the GamePanel or its dimensions
+        // Assuming you have a car object and a reference to the oscarSkit.GamePanel or its dimensions
         car.move(car.getDirection());
 
         // Get car's current position
