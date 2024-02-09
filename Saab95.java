@@ -1,11 +1,24 @@
+import javax.imageio.ImageIO;
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.util.Objects;
 
 public class Saab95 extends Car implements iTurbo {
 
     protected boolean turboOn;
+    BufferedImage im;
 
     public Saab95(){
         super(2, 125, Color.red, "Saab95", 1.9);
+
+        try{
+            im = ImageIO.read(Objects.requireNonNull(DrawPanel.class.getResourceAsStream("pics/Saab95.jpg")));
+        }catch (IllegalArgumentException | IOException ignored)
+        {
+
+        } setCarImage(im);
+
     }
 
 

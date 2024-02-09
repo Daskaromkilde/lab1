@@ -1,4 +1,5 @@
 import java.awt.*;
+import java.awt.image.BufferedImage;
 
 public abstract class Car implements iCar, iMovable {
 
@@ -11,6 +12,10 @@ public abstract class Car implements iCar, iMovable {
     private eDirection direction;
     private Cartransporter cartransporter; // if null then not on transport
     protected double weight;
+    protected BufferedImage carImage;
+
+
+
 
 
     public Car(int nrDoors, double enginePower, Color color, String modelName, double weight) {
@@ -23,6 +28,13 @@ public abstract class Car implements iCar, iMovable {
         this.direction = eDirection.EAST; // The initial facing of the car
         stopEngine();
         this.setPosition(this.position);
+    }
+    public void setCarImage(BufferedImage im) {
+        carImage = im;
+    }
+
+    public BufferedImage getCarImage(Car im) {
+        return im.carImage;
     }
 
 

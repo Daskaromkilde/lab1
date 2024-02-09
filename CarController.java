@@ -23,7 +23,7 @@ public class CarController {
     private Timer timer = new Timer(delay, new TimerListener());
 
     // The frame that represents this instance View of the MVC pattern
-    CarView frame;
+    static CarView frame;
     // A list of cars, modify if needed
     static ArrayList<Car> cars = new ArrayList<>();
 
@@ -48,11 +48,11 @@ public class CarController {
         Scania scania = new Scania();
         scania.setPosition(cc.frame.drawPanel.scaniaPoint);
         cc.cars.add(scania);
-
        liftBed();
 
        carWorkshop = new CarWorkshop(5);
       // carWorkshopPosition = cc.frame.drawPanel.volvoWorkshopPoint;
+        frame.drawPanel.addCars(cars);
 
         // Start the timer
         cc.timer.start();
@@ -68,7 +68,7 @@ public class CarController {
                 int y = (int) Math.round(car.getPosition().getY());
 
 
-            if (car.getPosition().x > frame.getSize().width- frame.drawPanel.volvoImage.getWidth() || car.getPosition().x < 0)
+            if (car.getPosition().x > frame.getSize().width - car.carImage.getWidth() || car.getPosition().x < 0)
                 {
                     car.turnRight();
                     car.turnRight();
@@ -112,10 +112,9 @@ public class CarController {
 
     // Calls the gas method for each car once
     void gas(int amount) {
-        double gas = amount;
         for (Car car : cars
                 ) {
-            car.gas(gas);
+            car.gas(amount);
         }
     }
     void brake()
