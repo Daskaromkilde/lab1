@@ -12,8 +12,6 @@ public class Cartransporter extends Truck {
         super(2, 125, Color.RED, "TruckTransportingCars", 5.7);
     }
 
-
-
     public void addCar(Car c) {
         if(!rampDown || !inRange(c.getPosition())) {
             throw new IllegalArgumentException("cant add car if ramp not lowered or car not in range");

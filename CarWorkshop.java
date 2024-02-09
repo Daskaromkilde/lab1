@@ -9,8 +9,6 @@ public class CarWorkshop<C extends Car> { //need to extend car because of THIS12
         this.maxCars = maxCars;
     }
 
-
-
     public void takeInCar(C c) {
         if (carsInService.size() < maxCars) {
             carsInService.add(c);
