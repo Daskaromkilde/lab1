@@ -4,32 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4e3097a4-7052-494d-8302-f41f496d44d7" name="Changes" comment="Skapat car class. Extendat saab&amp;volvo">
-      <change beforePath="$PROJECT_DIR$/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DrawPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/DrawPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saab95.java" beforeDir="false" afterPath="$PROJECT_DIR$/Saab95.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scania.java" beforeDir="false" afterPath="$PROJECT_DIR$/Scania.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oscarSkit/gamelooptest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oscarSkit/javaSwingTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/CarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/CarController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/GamePanel$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/GamePanel$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/GamePanel$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/GamePanel$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/GamePanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/gamelooptest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/javaSwingTest$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/javaSwingTest.class" beforeDir="false" />
-    </list>
-    <list id="8d733c31-2e0f-48ff-83c2-fba71edce175" name="Changes by Damkilde" comment="Changes by Damkilde">
-      <change beforePath="$PROJECT_DIR$/DrawPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/DrawPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Volvo240.java" beforeDir="false" afterPath="$PROJECT_DIR$/Volvo240.java" afterDir="false" />
-    </list>
-    <list id="9ec2a82a-d419-41fe-bd83-65c1e6b59438" name="Changes by johanbrynne" comment="">
-      <change beforePath="$PROJECT_DIR$/CarWorkshop.java" beforeDir="false" afterPath="$PROJECT_DIR$/CarWorkshop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cartransporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cartransporter.java" afterDir="false" />
-    </list>
+    <list default="true" id="4e3097a4-7052-494d-8302-f41f496d44d7" name="Changes" comment="Skapat car class. Extendat saab&amp;volvo" />
+    <list id="8d733c31-2e0f-48ff-83c2-fba71edce175" name="Changes by Damkilde" comment="Changes by Damkilde" />
+    <list id="9ec2a82a-d419-41fe-bd83-65c1e6b59438" name="Changes by johanbrynne" comment="Changes by johanbrynne" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,24 +41,11 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Volvo240.java" root0="FORCE_HIGHLIGHTING" />
   </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/DrawPanel.java">
-      <ranges>
-        <range start1="4" end1="4" start2="4" end2="7" changelist="4e3097a4-7052-494d-8302-f41f496d44d7" />
-        <range start1="25" end1="25" start2="28" end2="30" changelist="4e3097a4-7052-494d-8302-f41f496d44d7" />
-        <range start1="28" end1="30" start2="33" end2="35" changelist="8d733c31-2e0f-48ff-83c2-fba71edce175" />
-        <range start1="41" end1="41" start2="46" end2="51" changelist="4e3097a4-7052-494d-8302-f41f496d44d7" />
-        <range start1="44" end1="44" start2="54" end2="75" changelist="4e3097a4-7052-494d-8302-f41f496d44d7" />
-        <range start1="51" end1="52" start2="82" end2="83" changelist="4e3097a4-7052-494d-8302-f41f496d44d7" />
-        <range start1="65" end1="66" start2="96" end2="97" changelist="4e3097a4-7052-494d-8302-f41f496d44d7" />
-      </ranges>
-    </file>
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -112,7 +76,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;CodeWithMe&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -162,7 +126,11 @@
       <workItem from="1707218151580" duration="6677000" />
       <workItem from="1707312892262" duration="4304000" />
       <workItem from="1707396277958" duration="5072000" />
-      <workItem from="1707487725702" duration="2490000" />
+      <workItem from="1707487725702" duration="4661000" />
+      <workItem from="1707738647748" duration="2268000" />
+      <workItem from="1707829542079" duration="3050000" />
+      <workItem from="1707932540053" duration="857000" />
+      <workItem from="1707999094279" duration="816000" />
     </task>
     <task id="LOCAL−00001" summary="Skapat car class. Extendat saab&amp;volvo">
       <option name="closed" value="true" />
@@ -388,7 +356,42 @@
       <option name="presentableId" value="LOCAL−00032" />
       <updated>1707320218101</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL−00033" summary="Skapat car class. Extendat saab&amp;volvo">
+      <option name="closed" value="true" />
+      <created>1707492354886</created>
+      <option name="number" value="LOCAL−00033" />
+      <option name="presentableId" value="LOCAL−00033" />
+      <updated>1707492354886</updated>
+    </task>
+    <task id="LOCAL−00034" summary="Skapat car class. Extendat saab&amp;volvo">
+      <option name="closed" value="true" />
+      <created>1707492375963</created>
+      <option name="number" value="LOCAL−00034" />
+      <option name="presentableId" value="LOCAL−00034" />
+      <updated>1707492375963</updated>
+    </task>
+    <task id="LOCAL−00035" summary="Changes by Damkilde">
+      <option name="closed" value="true" />
+      <created>1707492384400</created>
+      <option name="number" value="LOCAL−00035" />
+      <option name="presentableId" value="LOCAL−00035" />
+      <updated>1707492384400</updated>
+    </task>
+    <task id="LOCAL−00036" summary="Changes by johanbrynne">
+      <option name="closed" value="true" />
+      <created>1707492391954</created>
+      <option name="number" value="LOCAL−00036" />
+      <option name="presentableId" value="LOCAL−00036" />
+      <updated>1707492391954</updated>
+    </task>
+    <task id="LOCAL−00037" summary="Skapat car class. Extendat saab&amp;volvo">
+      <option name="closed" value="true" />
+      <created>1707492402529</created>
+      <option name="number" value="LOCAL−00037" />
+      <option name="presentableId" value="LOCAL−00037" />
+      <updated>1707492402529</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

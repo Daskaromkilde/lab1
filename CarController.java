@@ -43,11 +43,11 @@ public class CarController {
         cc.cars.add(new Volvo240());
 
         Saab95 saab = new Saab95();
-        saab.setPosition(cc.frame.drawPanel.saabPoint);
+        saab.setPosition(new Point(0,100));
         cc.cars.add(saab);
 
         Scania scania = new Scania();
-        scania.setPosition(cc.frame.drawPanel.scaniaPoint);
+        scania.setPosition(new Point(0,200));
         cc.cars.add(scania);
        liftBed();
 

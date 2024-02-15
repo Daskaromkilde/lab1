@@ -13,21 +13,12 @@ import javax.swing.*;
 public class DrawPanel extends JPanel{
 
     // Just a single image, TODO: Generalize
-    BufferedImage volvoImage;
-    BufferedImage saabImage;
-    BufferedImage scaniaImage;
+
     // To keep track of a single car's position
-    Point volvoPoint = new Point();
-    Point saabPoint = new Point(0,100);
-    Point scaniaPoint = new Point(0,200);
 
     BufferedImage volvoWorkshopImage;
     Point volvoWorkshopPoint = new Point(300,0);
-
-    BufferedImage saabWorkshopImage;
-    Point saabWorkshopPoint = new Point(300, 300);
-
-     ArrayList<CarPoint> carMap = new ArrayList<>();
+     ArrayList<Touple<Car,Point>> carMap = new ArrayList<>();
 
     // TODO: Make this general for all cars
     void moveit(int x, int y, Car c){
@@ -46,8 +37,8 @@ public class DrawPanel extends JPanel{
             scaniaPoint.y = y;
         }*/
         for (int i = 0; i < carMap.size(); i++) {
-            if (carMap.get(i).getCar() == c) {
-                carMap.get(i).setPoint(new Point(x,y));
+            if (carMap.get(i).getFirst().equals(c)) {
+                carMap.get(i).setSecond(new Point(x,y));
             }
         }
 
@@ -57,32 +48,12 @@ public class DrawPanel extends JPanel{
         for (int i = 0; i < cars.size(); i++) {
             int y = 0;
             Point p = new Point(0, y);
-            carMap.add(new CarPoint(cars.get(i), p));
+            carMap.add(new Touple<Car,Point>(cars.get(i), p));
             y += 100;
 
         }
     }
-    public static class CarPoint {
-        private Car car;
-        private Point point;
 
-        public CarPoint(Car car, Point point) {
-            this.car = car;
-            this.point = point;
-        }
-
-        public Car getCar() {
-            return car;
-        }
-
-        public Point getPoint() {
-            return point;
-        }
-
-        public void setPoint(Point point) {
-            this.point = point;
-        }
-    }
 
     // Initializes the panel and reads the images
     public DrawPanel(int x, int y) {
@@ -114,9 +85,9 @@ public class DrawPanel extends JPanel{
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         for (int i = 0; i < carMap.size(); i++) {
-           BufferedImage im = carMap.get(i).getCar().carImage;
-            int x = carMap.get(i).getPoint().x;
-            int y = carMap.get(i).getPoint().y;
+           BufferedImage im = carMap.get(i).getFirst().carImage;
+            int x = carMap.get(i).getSecond().x;
+            int y = carMap.get(i).getSecond().y;
            g.drawImage(im,x,y, null );
         }
         g.drawImage(volvoWorkshopImage, volvoWorkshopPoint.x, volvoWorkshopPoint.y, null);
