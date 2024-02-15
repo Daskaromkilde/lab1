@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4e3097a4-7052-494d-8302-f41f496d44d7" name="Changes" comment="Skapat car class. Extendat saab&amp;volvo" />
+    <list default="true" id="4e3097a4-7052-494d-8302-f41f496d44d7" name="Changes" comment="Skapat car class. Extendat saab&amp;volvo">
+      <change beforePath="$PROJECT_DIR$/DrawPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/DrawPanel.java" afterDir="false" />
+    </list>
     <list id="8d733c31-2e0f-48ff-83c2-fba71edce175" name="Changes by Damkilde" comment="Changes by Damkilde" />
     <list id="9ec2a82a-d419-41fe-bd83-65c1e6b59438" name="Changes by johanbrynne" comment="Changes by johanbrynne" />
     <option name="SHOW_DIALOG" value="false" />
@@ -130,7 +132,8 @@
       <workItem from="1707738647748" duration="2268000" />
       <workItem from="1707829542079" duration="3050000" />
       <workItem from="1707932540053" duration="857000" />
-      <workItem from="1707999094279" duration="816000" />
+      <workItem from="1707999094279" duration="1503000" />
+      <workItem from="1708001667752" duration="2072000" />
     </task>
     <task id="LOCAL−00001" summary="Skapat car class. Extendat saab&amp;volvo">
       <option name="closed" value="true" />
@@ -391,7 +394,14 @@
       <option name="presentableId" value="LOCAL−00037" />
       <updated>1707492402529</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL−00038" summary="Skapat car class. Extendat saab&amp;volvo">
+      <option name="closed" value="true" />
+      <created>1708002521684</created>
+      <option name="number" value="LOCAL−00038" />
+      <option name="presentableId" value="LOCAL−00038" />
+      <updated>1708002521684</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

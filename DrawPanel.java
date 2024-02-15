@@ -22,20 +22,6 @@ public class DrawPanel extends JPanel{
 
     // TODO: Make this general for all cars
     void moveit(int x, int y, Car c){
-       /* if(c instanceof Volvo240) {
-            c.setPosition().x = x;
-            volvoPoint.y = y;
-        }
-        if(c instanceof Saab95)
-        {
-            saabPoint.x = x;
-            saabPoint.y = y;
-        }
-        if(c instanceof Scania)
-        {
-            scaniaPoint.x = x;
-            scaniaPoint.y = y;
-        }*/
         for (int i = 0; i < carMap.size(); i++) {
             if (carMap.get(i).getFirst().equals(c)) {
                 carMap.get(i).setSecond(new Point(x,y));
@@ -62,15 +48,6 @@ public class DrawPanel extends JPanel{
         this.setBackground(Color.green);
         // Print an error message in case file is not found with a try/catch block
         try {
-            // You can remove the "pics" part if running outside of IntelliJ and
-            // everything is in the same main folder.
-           // volvoImage = ImageIO.read(new File("Volvo240.jpg"));
-
-            // Rememember to rightclick src New -> Package -> name: pics -> MOVE *.jpg to pics.
-            // if you are starting in IntelliJ.
-           /* volvoImage = ImageIO.read(DrawPanel.class.getResourceAsStream("pics/Volvo240.jpg"));
-            saabImage = ImageIO.read(DrawPanel.class.getResourceAsStream("pics/Saab95.jpg"));
-            scaniaImage = ImageIO.read(DrawPanel.class.getResourceAsStream("pics/Scania.jpg"));*/
             volvoWorkshopImage = ImageIO.read(DrawPanel.class.getResourceAsStream("pics/VolvoBrand.jpg"));
         } catch (IOException ex)
         {
