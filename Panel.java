@@ -20,8 +20,7 @@ public class Panel extends JFrame{
     // The controller member
     CarController carC;
 
-    DrawPanel drawPanel = new DrawPanel(X, Y-240);
-
+   protected View view = new View(X,Y-240);
     JPanel controlPanel = new JPanel();
 
     JPanel gasPanel = new JPanel();
@@ -40,7 +39,7 @@ public class Panel extends JFrame{
     JButton stopButton = new JButton("Stop all cars");
 
     // Constructor
-    public CarView(String framename, CarController cc){
+    public Panel(String framename, CarController cc){
         this.carC = cc;
         initComponents(framename);
     }
@@ -52,8 +51,7 @@ public class Panel extends JFrame{
         this.setTitle(title);
         this.setPreferredSize(new Dimension(X,Y));
         this.setLayout(new FlowLayout(FlowLayout.LEFT, 0, 0));
-
-        this.add(drawPanel);
+        this.add(view);
 
 
 

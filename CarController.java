@@ -26,6 +26,7 @@ public class CarController {
     // The frame that represents this instance View of the MVC pattern
     static View frame;
     // A list of cars, modify if needed
+    static Panel panel;
     static ArrayList<Car> cars = new ArrayList<>();
 
     static CarWorkshop<Volvo240> carWorkshop;
@@ -37,9 +38,11 @@ public class CarController {
         // Instance of this class
         CarController cc = new CarController();
 
-
         // Start a new view and send a reference of self
-        cc.frame = new CarView("CarSim 1.0", cc);
+        cc.panel = new Panel("bonga", cc);
+        cc.frame = panel.view;
+
+
         cc.cars.add(new Volvo240());
 
         Saab95 saab = new Saab95();
@@ -53,7 +56,7 @@ public class CarController {
 
        carWorkshop = new CarWorkshop(5);
       // carWorkshopPosition = cc.frame.drawPanel.volvoWorkshopPoint;
-        frame.drawPanel.addCars(cars);
+        frame.addCars(cars);
 
         // Start the timer
         cc.timer.start();
@@ -84,15 +87,15 @@ public class CarController {
                     car.move(car.getDirection());
                 }
             if(car instanceof Volvo240) {
-                if (workshopDetector ((Volvo240) car,carWorkshop, frame.drawPanel.volvoWorkshopImage, frame.drawPanel.volvoWorkshopPoint))
+                if (workshopDetector ((Volvo240) car,carWorkshop, frame.volvoWorkshopImage, frame.volvoWorkshopPoint))
                 {
                     break;
                 }
             }
 
-                frame.drawPanel.moveit(x, y, car);
+                moveit(x, y, car);
                 // repaint() calls the paintComponent method of the panel
-                frame.drawPanel.repaint();
+                frame.repaint();
             }
         }
     }
