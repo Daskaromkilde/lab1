@@ -1,10 +1,7 @@
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 
@@ -18,17 +15,8 @@ public class View extends JPanel{
 
     BufferedImage volvoWorkshopImage;
     Point volvoWorkshopPoint = new Point(300,0);
-     ArrayList<Car> carMap = new ArrayList<>();
+     ArrayList<Car> carMap;
 
-    // TODO: Make this general for all cars
-/*    void moveit(int x, int y, Car c){
-        for (int i = 0; i < carMap.size(); i++) {
-            if (carMap.get(i).getPosition().equals(c)) {
-                carMap.get(i).setPosition(new Point(x,y));
-            }
-        }
-
-    }*/
 
 
     public void addCars(ArrayList<Car> cars)
