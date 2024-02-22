@@ -24,7 +24,7 @@ public class CarController {
     private Timer timer = new Timer(delay, new TimerListener());
 
     // The frame that represents this instance View of the MVC pattern
-    static CarView frame;
+    static View frame;
     // A list of cars, modify if needed
     static ArrayList<Car> cars = new ArrayList<>();
 
@@ -63,6 +63,8 @@ public class CarController {
     * view to update its images. Change this method to your needs.
     * */
     private class TimerListener implements ActionListener {
+
+
 
         public void actionPerformed(ActionEvent e) {for (Car car : cars) {
                 int x = (int) Math.round(car.getPosition().getX());
@@ -156,4 +158,15 @@ public class CarController {
             }
         }
     }
+
+    void moveit(int x, int y, Car c){
+        for (int i = 0; i < cars.size(); i++) {
+            if (cars.get(i).getPosition().equals(c)) {
+                cars.get(i).setPosition(new Point(x,y));
+            }
+        }
+
+    }
+
+
 }

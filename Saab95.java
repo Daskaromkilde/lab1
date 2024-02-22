@@ -13,7 +13,7 @@ public class Saab95 extends Car implements iTurbo {
         super(2, 125, Color.red, "Saab95", 1.9);
 
         try{
-            im = ImageIO.read(Objects.requireNonNull(DrawPanel.class.getResourceAsStream("pics/Saab95.jpg")));
+            im = ImageIO.read(Objects.requireNonNull(Panel.class.getResourceAsStream("pics/Saab95.jpg")));
         }catch (IllegalArgumentException | IOException ignored)
         {
 

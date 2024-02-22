@@ -14,7 +14,7 @@ public class Volvo240 extends Car{
         super(4, 100, Color.black, "Volvo240", 1.9);
 
         try{
-            im = ImageIO.read(Objects.requireNonNull(DrawPanel.class.getResourceAsStream("pics/Volvo240.jpg")));
+            im = ImageIO.read(Objects.requireNonNull(Panel.class.getResourceAsStream("pics/Volvo240.jpg")));
         }catch (IllegalArgumentException | IOException ignored)
         {
 
