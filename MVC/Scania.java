@@ -1,3 +1,5 @@
+package MVC;
+
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -11,7 +13,7 @@ public class Scania extends Truck{
 
 
     public Scania() {
-        super(2, 125, Color.BLUE, "Scania", 3.6);
+        super(2, 125, Color.BLUE, "MVC.Scania", 3.6);
         setRamp(0,lowestBedAngle);
         try
         {

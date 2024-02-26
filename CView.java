@@ -5,9 +5,9 @@ import java.util.ArrayList;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 
-// This panel represents the animated part of the view with the car images.
-
-public class View extends JPanel{
+// This panel represents the animated part of the CView with the car images.
+/*
+public class CView extends JPanel{
 
     // Just a single image, TODO: Generalize
 
@@ -15,11 +15,11 @@ public class View extends JPanel{
 
     BufferedImage volvoWorkshopImage;
     Point volvoWorkshopPoint = new Point(300,0);
-     ArrayList<Car> carMap;
+     ArrayList<MVC.Car> carMap;
 
 
 
-    public void addCars(ArrayList<Car> cars)
+    public void addCars(ArrayList<MVC.Car> cars)
     {
         for (int i = 0; i < cars.size(); i++) {
             int y = 0;
@@ -32,13 +32,13 @@ public class View extends JPanel{
 
 
     // Initializes the panel and reads the images
-    public View(int x, int y) {
+    public CView(int x, int y) {
         this.setDoubleBuffered(true);
         this.setPreferredSize(new Dimension(x, y));
         this.setBackground(Color.green);
         // Print an error message in case file is not found with a try/catch block
         try {
-            volvoWorkshopImage = ImageIO.read(View.class.getResourceAsStream("pics/VolvoBrand.jpg"));
+            volvoWorkshopImage = ImageIO.read(CView.class.getResourceAsStream("pics/VolvoBrand.jpg"));
         } catch (IOException ex)
         {
             ex.printStackTrace();
@@ -59,8 +59,5 @@ public class View extends JPanel{
         }
 
         g.drawImage(volvoWorkshopImage, volvoWorkshopPoint.x, volvoWorkshopPoint.y, null);
-
-
-
     }
 }

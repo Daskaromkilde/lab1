@@ -1,4 +1,10 @@
-public class Observable implements iObserver{
+package MVC;
+
+import java.util.ArrayList;
+
+public class Observable {
+
+    private ArrayList<Observer> observers = new ArrayList<>();
 
     public void addObservers(iObserver observer){
 
@@ -10,10 +16,5 @@ public class Observable implements iObserver{
     {
 
     }
-    public void notifyOb()
-    {
-
-    }
-
 
 }

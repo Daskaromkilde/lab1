@@ -1,3 +1,5 @@
+package MVC;
+
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -10,7 +12,7 @@ public class Saab95 extends Car implements iTurbo {
     BufferedImage im;
 
     public Saab95(){
-        super(2, 125, Color.red, "Saab95", 1.9);
+        super(2, 125, Color.red, "MVC.Saab95", 1.9);
 
         try{
             im = ImageIO.read(Objects.requireNonNull(Panel.class.getResourceAsStream("pics/Saab95.jpg")));

@@ -1,3 +1,5 @@
+package MVC;
+
 import java.util.ArrayList;
 import java.awt.*;
 
@@ -20,7 +22,7 @@ public class Cartransporter extends Truck {
         } if (loadedCars.size() >= maxLoadedCars) {
             throw new IllegalArgumentException("Cant add car. Transporter is full.");
         } if (c.weight > maxWeightPerCar) {
-            throw new IllegalArgumentException("Car is too heavy");
+            throw new IllegalArgumentException("MVC.Car is too heavy");
         }
         c.transporter(this);
         loadedCars.add(c);

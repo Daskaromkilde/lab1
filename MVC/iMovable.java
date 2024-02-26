@@ -1,3 +1,5 @@
+package MVC;
+
 public interface iMovable {
     void move(eDirection facing);
 

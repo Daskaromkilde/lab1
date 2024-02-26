@@ -1,3 +1,5 @@
+package MVC;
+
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
@@ -6,53 +8,17 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
-public class newCarController {
+public class Controller extends JFrame {
 
     static ArrayList<Car> cars = new ArrayList<>();
-
-
-    private class TimerListener implements ActionListener {
-
-
-
-        public void actionPerformed(ActionEvent e) {for (Car car : cars) {
-            int x = (int) Math.round(car.getPosition().getX());
-            int y = (int) Math.round(car.getPosition().getY());
-
-
-            if (car.getPosition().x > frame.getSize().width - car.carImage.getWidth() || car.getPosition().x < 0)
-            {
-                car.turnRight();
-                car.turnRight();
-
-                eDirection ed = car.getDirection();
-                car.move(ed);
-
-            }else
-            {
-                car.move(car.getDirection());
-            }
-            if(car instanceof Volvo240) {
-                if (workshopDetector ((Volvo240) car,carWorkshop, frame.volvoWorkshopImage, frame.volvoWorkshopPoint))
-                {
-                    break;
-                }
-            }
-
-            moveit(x, y, car);
-            // repaint() calls the paintComponent method of the panel
-            frame.repaint();
-        }
-        }
-    } // timerlistener
 
     private static final int X = 800;
     private static final int Y = 800;
 
     // The controller member
-    CarController carC;
+    Module carC;
 
-    protected View view = new View(X,Y-240);
+    protected View View = new View(X,Y-240);
     JPanel controlPanel = new JPanel();
 
     JPanel gasPanel = new JPanel();
@@ -64,18 +30,22 @@ public class newCarController {
     JButton brakeButton = new JButton("Brake");
     JButton turboOnButton = new JButton("Saab Turbo on");
     JButton turboOffButton = new JButton("Saab Turbo off");
-    JButton liftBedButton = new JButton("Scania Lift Bed");
+    JButton liftBedButton = new JButton("MVC.Scania Lift Bed");
     JButton lowerBedButton = new JButton("Lower Lift Bed");
 
     JButton startButton = new JButton("Start all cars");
     JButton stopButton = new JButton("Stop all cars");
 
+    public Controller(String framename, Module cc){
+        this.carC = cc;
+        initComponents(framename);
+    }
     private void initComponents(String title) {
 
         this.setTitle(title);
         this.setPreferredSize(new Dimension(X, Y));
         this.setLayout(new FlowLayout(FlowLayout.LEFT, 0, 0));
-        this.add(view);
+        this.add(View);
 
 
         SpinnerModel spinnerModel =
@@ -149,16 +119,16 @@ public class newCarController {
         startButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                for (int i = 0; i < carC.cars.size(); i++) {
-                    carC.cars.get(i).gas(1);
+                for (int i = 0; i < carC.getCars().size(); i++) {
+                    carC.getCars().get(i).gas(1);
                 }
             }
         });
         stopButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                for (int i = 0; i < carC.cars.size(); i++) {
-                    carC.cars.get(i).brake(1);
+                for (int i = 0; i < carC.getCars().size(); i++) {
+                    carC.getCars().get(i).brake(1);
                 }
             }
         });

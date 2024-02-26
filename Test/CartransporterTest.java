@@ -1,4 +1,7 @@
-import org.junit.jupiter.api.BeforeAll;
+import MVC.Cartransporter;
+import MVC.Saab95;
+import MVC.Scania;
+import MVC.Volvo240;
 import org.junit.jupiter.api.Test;
 
 import java.awt.*;

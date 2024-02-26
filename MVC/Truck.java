@@ -1,3 +1,5 @@
+package MVC;
+
 import java.awt.*;
 
 public class Truck extends Car{
@@ -5,7 +7,7 @@ public class Truck extends Car{
     private int bedAngle;
 
     public Truck(int nrDoors, int enginePower, Color color, String name, double weight) {
-        super(2,125, Color.RED, "Truck", 5.7);
+        super(2,125, Color.RED, "MVC.Truck", 5.7);
     }
 
     @Override

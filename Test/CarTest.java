@@ -1,3 +1,6 @@
+import MVC.Saab95;
+import MVC.Volvo240;
+import MVC.eDirection;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeAll;
 

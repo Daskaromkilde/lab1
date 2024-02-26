@@ -1,3 +1,6 @@
+import MVC.CarWorkshop;
+import MVC.Saab95;
+import MVC.Volvo240;
 import org.junit.jupiter.api.Test;
 
 class CarWorkshopTest {

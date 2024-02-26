@@ -1,3 +1,5 @@
+package MVC;
+
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -11,7 +13,7 @@ public class Volvo240 extends Car{
 
 
     public Volvo240(){
-        super(4, 100, Color.black, "Volvo240", 1.9);
+        super(4, 100, Color.black, "MVC.Volvo240", 1.9);
 
         try{
             im = ImageIO.read(Objects.requireNonNull(Panel.class.getResourceAsStream("pics/Volvo240.jpg")));
