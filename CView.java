@@ -13,6 +13,7 @@ public class CView extends JPanel{
 
     // To keep track of a single car's position
 
+
     BufferedImage volvoWorkshopImage;
     Point volvoWorkshopPoint = new Point(300,0);
      ArrayList<MVC.Car> carMap;
@@ -61,3 +62,4 @@ public class CView extends JPanel{
         g.drawImage(volvoWorkshopImage, volvoWorkshopPoint.x, volvoWorkshopPoint.y, null);
     }
 }
+*/

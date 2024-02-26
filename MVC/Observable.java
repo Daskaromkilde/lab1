@@ -6,14 +6,13 @@ public class Observable {
 
     private ArrayList<Observer> observers = new ArrayList<>();
 
-    public void addObservers(iObserver observer){
-
+    public void addObservers(Observer observer){
+        observer.add(observer);
     }
     public void removeObservers(iObserver observer){
 
     }
-    public void notifyObservers()
-    {
+    public void notifyObservers() {
 
     }
 
