@@ -21,7 +21,7 @@ public class Volvo240 extends Car{
           //  im= ImageIO.read(new File("pics123/Volvo240.jpg"));
         }catch (IllegalArgumentException | IOException ignored)
         {
-
+            System.out.println("bajs");
         } setCarImage(im);
     }
 
