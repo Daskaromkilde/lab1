@@ -17,7 +17,7 @@ public class Volvo240 extends Car{
         super(4, 100, Color.black, "MVC.Volvo240", 1.9);
 
         try{
-           im = ImageIO.read(Objects.requireNonNull(View.class.getResourceAsStream("pics123/Volvo240.jpg")));
+           im = ImageIO.read(Objects.requireNonNull(View.class.getResourceAsStream("/pics123/Volvo240.jpg")));
           //  im= ImageIO.read(new File("pics123/Volvo240.jpg"));
         }catch (IllegalArgumentException | IOException ignored)
         {

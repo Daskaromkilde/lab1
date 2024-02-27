@@ -17,7 +17,7 @@ public class Scania extends Truck{
         setRamp(0,lowestBedAngle);
         try
         {
-            im = ImageIO.read(Objects.requireNonNull(View.class.getResourceAsStream("pics123/Scania.jpg")));
+            im = ImageIO.read(Objects.requireNonNull(View.class.getResourceAsStream("/pics123/Scania.jpg")));
 
         }catch (IllegalArgumentException | IOException ignored){
 

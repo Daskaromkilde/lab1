@@ -15,7 +15,8 @@ public class CarWorkshop<C extends Car> { //need to extend car because of THIS12
     public CarWorkshop(int maxCars){
         this.maxCars = maxCars;
         try {
-            volvoWorkshopImage = ImageIO.read(View.class.getResourceAsStream("pics123/VolvoBrand.jpg"));
+            volvoWorkshopImage = ImageIO.read(View.class.getResourceAsStream("/pics123/VolvoBrand.jpg"));
+
         } catch (IOException ex)
         {
             ex.printStackTrace();
