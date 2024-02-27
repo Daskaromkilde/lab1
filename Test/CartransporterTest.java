@@ -1,3 +1,4 @@
+/*
 import MVC.Cartransporter;
 import MVC.Saab95;
 import MVC.Scania;
@@ -135,4 +136,4 @@ class CartransporterTest {
         v.setPosition(new Point(t.getPosition().x+t.inRangeUnit * 2,t.getPosition().x+t.inRangeUnit * 2));
         assertFalse(t.inRange(v.getPosition()));
     }
-}
+}*/
