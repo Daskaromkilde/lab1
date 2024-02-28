@@ -72,7 +72,7 @@ public class Module {
         ArrayList<Car> allCars = new ArrayList<>();
         allCars.add(new Volvo240());
         allCars.add(new Saab95());
-        allCars.add(new Scania());
+        //allCars.add(new Scania());
         int random = (int) (Math.random() * allCars.size());
 
        return allCars.get(random);
@@ -132,13 +132,13 @@ public class Module {
 
     }// Calls the gas method for each car once
     public void gas(int amount) {
-        for (Car car : cars
-        ) {
-            car.gas(amount);
-        }
+        for (Car car : cars) {
+
+                car.gas(amount);}
+
     }
-    void brake()
-    {
+
+    void brake() {
         double brake = 0.7;
         for (Car car : cars
         ) {
@@ -155,8 +155,7 @@ public class Module {
             }
         }
     }
-    void lowerBed()
-    {
+    void lowerBed() {
         for(Car car : cars)
         {
             if(car instanceof Truck)
@@ -165,6 +164,10 @@ public class Module {
             }
         }
     }
+
+
+
+
     void turnTurbo(boolean b)
     {
         for (Car car : cars)

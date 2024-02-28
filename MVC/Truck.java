@@ -21,11 +21,10 @@ public class Truck extends Car{
             super.gas(amount);
         }else
         {
-            throw new IllegalArgumentException("Can't gas if ramp is down");
+            System.out.println("cant drive with ramp down");;
         }
     }
-    public void setRamp(int i, int lowestBedAngle)
-    {
+    public void setRamp(int i, int lowestBedAngle) {
 
         this.bedAngle = i;
         if(bedAngle != lowestBedAngle) {
