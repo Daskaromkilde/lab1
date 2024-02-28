@@ -106,16 +106,21 @@ public class Controller extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 System.out.println("adding car button pressed");
                 Car carR = carC.randomCar();
-                carC.addCars(carR);
-                View.addCars(carR);
+
+                if (carC.getCars().size() < 6) {
+                    carC.addCars(carR);
+                    View.addCars(carR);
+                } else throw new IllegalArgumentException("Full");
             }
         });
 
         removeCar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                carC.removeCars();
-                View.removeCar();
+                if (!carC.getCars().isEmpty()) {
+                    carC.removeCars();
+                    View.removeCar();
+                } else throw new IllegalArgumentException("Empty");
             }
         });
 
