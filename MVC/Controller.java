@@ -36,6 +36,9 @@ public class Controller extends JFrame {
     JButton startButton = new JButton("Start all cars");
     JButton stopButton = new JButton("Stop all cars");
 
+    JButton addCar = new JButton("Add car");
+    JButton removeCar = new JButton("Remove car");
+
     public Controller(String framename, Module cc){
         this.carC = cc;
         initComponents(framename);
@@ -71,15 +74,19 @@ public class Controller extends JFrame {
         controlPanel.add(gasButton, 0);
         controlPanel.add(turboOnButton, 1);
         controlPanel.add(liftBedButton, 2);
-        controlPanel.add(brakeButton, 3);
-        controlPanel.add(turboOffButton, 4);
-        controlPanel.add(lowerBedButton, 5);
-        controlPanel.setPreferredSize(new Dimension((X / 2) + 4, 200));
+        controlPanel.add(startButton, 3);
+        controlPanel.add(stopButton, 4);
+        controlPanel.add(brakeButton, 5);
+        controlPanel.add(turboOffButton, 6);
+        controlPanel.add(lowerBedButton, 7);
+        controlPanel.add(addCar, 8);
+        controlPanel.add(removeCar, 9);
+        controlPanel.setPreferredSize(new Dimension((X / 2) + 300, 200));
         this.add(controlPanel);
         controlPanel.setBackground(Color.CYAN);
 
 
-        startButton.setBackground(Color.blue);
+/*        startButton.setBackground(Color.blue);
         startButton.setForeground(Color.green);
         startButton.setPreferredSize(new Dimension(X / 5 - 15, 200));
         this.add(startButton);
@@ -88,10 +95,32 @@ public class Controller extends JFrame {
         stopButton.setBackground(Color.red);
         stopButton.setForeground(Color.black);
         stopButton.setPreferredSize(new Dimension(X / 5 - 15, 200));
-        this.add(stopButton);
+        this.add(stopButton);*/
 
         // This actionListener is for the gas button only
         // TODO: Create more for each component as necessary
+
+
+        addCar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("adding car button pressed");
+                Car bajs = carC.randomCar();
+                carC.addCars(bajs);
+                ArrayList<Car> fart = new ArrayList<>();
+                fart.add(bajs);
+                View.addCars(fart);
+            }
+        });
+
+        removeCar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                carC.removeCars();
+                View.removeCar();
+            }
+        });
+
         gasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

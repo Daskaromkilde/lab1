@@ -1,11 +1,14 @@
 package MVC;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Module {
 
@@ -53,13 +56,32 @@ public class Module {
         return carWorkshops;
     }
 
-    public void addCars(Car c)
-    {
+    public void addCars(Car c) {
         cars.add(c);
+
         observable.notifyObservers();
+        System.out.println(cars.size());
     }
     public ArrayList<Car> getCars() {
         return cars;
+    }
+
+    public Car randomCar() {
+        System.out.println("before random car added" + cars.size());
+        Saab95 saabtest = new Saab95();
+
+        saabtest.setPosition(new Point(0, 300));
+        try{
+            saabtest.carImage = ImageIO.read(Objects.requireNonNull(View.class.getResourceAsStream("/pics123/Saab95.jpg")));
+        }catch (IllegalArgumentException | IOException ignored)
+        {
+
+        } return saabtest;
+    }
+
+    public void removeCars() {
+        cars.remove(cars.size()-1);
+        observable.notifyObservers();
     }
 
 
