@@ -40,11 +40,14 @@ public class View extends JPanel implements iObserver{
 
     }
 
-    public void addCars(ArrayList<Car> cars) {
-        for (int i = 0; i < cars.size(); i++) {
-            carMap.add(cars.get(i));
+    public void addCars(Car cars) {
+        if(carMap.size() > 0) {
+            int y = carMap.get(carMap.size() - 1).getPosition().y;
+            cars.setPosition(new Point(0,y+100));
 
         }
+            carMap.add(cars);
+
     }
 
     public void removeCar() {

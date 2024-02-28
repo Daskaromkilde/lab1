@@ -105,11 +105,9 @@ public class Controller extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("adding car button pressed");
-                Car bajs = carC.randomCar();
-                carC.addCars(bajs);
-                ArrayList<Car> fart = new ArrayList<>();
-                fart.add(bajs);
-                View.addCars(fart);
+                Car carR = carC.randomCar();
+                carC.addCars(carR);
+                View.addCars(carR);
             }
         });
 

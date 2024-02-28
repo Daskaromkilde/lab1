@@ -67,16 +67,13 @@ public class Module {
     }
 
     public Car randomCar() {
-        System.out.println("before random car added" + cars.size());
-        Saab95 saabtest = new Saab95();
+        ArrayList<Car> allCars = new ArrayList<>();
+        allCars.add(new Volvo240());
+        allCars.add(new Saab95());
+        allCars.add(new Scania());
+        int random = (int) (Math.random() * allCars.size());
 
-        saabtest.setPosition(new Point(0, 300));
-        try{
-            saabtest.carImage = ImageIO.read(Objects.requireNonNull(View.class.getResourceAsStream("/pics123/Saab95.jpg")));
-        }catch (IllegalArgumentException | IOException ignored)
-        {
-
-        } return saabtest;
+       return allCars.get(random);
     }
 
     public void removeCars() {

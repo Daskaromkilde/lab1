@@ -14,8 +14,12 @@ public class mainApp {
     public static void main(String[] args) {
         Module module = new Module();
         Controller cc = new Controller("bonga", module);
-        cc.View.addCars(module.getCars());
-        for (int i = 0; i <module.getCarWorkshops().size(); i++) {
+       // cc.View.addCars(module.getCars());
+        for (int i = 0; i < module.getCars().size(); i++) {
+            cc.View.addCars(module.getCars().get(i));
+        }
+
+        for (int i = 0; i < module.getCarWorkshops().size(); i++) {
             cc.View.addWorkshops(module.getCarWorkshops().get(i));
         }
         module.getObservable().addObservers(cc.View);

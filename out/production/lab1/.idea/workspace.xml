@@ -4,305 +4,412 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c186c5cf-6ed6-423a-978d-3f4c71c798ab" name="Changes" comment="egen refractor klar">
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/MVC/CarWorkshop.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/MVC/CarWorkshop.class" afterDir="false" />
+    <list default="true" id="4e3097a4-7052-494d-8302-f41f496d44d7" name="Changes" comment="Skapat car class. Extendat saab&amp;volvo">
+      <change beforePath="$PROJECT_DIR$/DrawPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/DrawPanel.java" afterDir="false" />
     </list>
-    <list id="b56244f7-ca03-4ac5-8fdd-4cf8b9007b9d" name="Changes by johanbrynne" comment="Changes by johanbrynne" />
+    <list id="8d733c31-2e0f-48ff-83c2-fba71edce175" name="Changes by Damkilde" comment="Changes by Damkilde" />
+    <list id="9ec2a82a-d419-41fe-bd83-65c1e6b59438" name="Changes by johanbrynne" comment="Changes by johanbrynne" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageOptionsProvider">
+    <option name="myAddOrReplace" value="1" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="UML MindMap" />
+        <option value="Enum" />
+        <option value="JUnit5 Test Class" />
         <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Damkilde &lt;oskardamkilde@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Lab3" />
+        <entry key="$PROJECT_DIR$" value="Lab1" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RESET_MODE" value="HARD" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;Daskaromkilde&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="5bcb0602-76a2-4ebe-b363-82eb0248dd6b" />
-        <option name="url" value="https://github.com/Daskaromkilde/lab1.git" />
-      </UrlAndAccount>
-    </option>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Volvo240.java" root0="FORCE_HIGHLIGHTING" />
   </component>
-  <component name="KubernetesApiProvider">{
-  &quot;isMigrated&quot;: true
-}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 6
+  &quot;associatedIndex&quot;: 1
 }</component>
-  <component name="ProjectId" id="2bil56HPMRtGigqbaezCqfXLbro" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="1" id="Add" />
-  </component>
+  <component name="ProjectId" id="2b7ySIsbddostrNgLr13GvNywZ1" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;Application.CarController.executor&quot;: &quot;Run&quot;,
-    &quot;Application.mainApp.executor&quot;: &quot;Run&quot;,
-    &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML MindMap&quot;,
-    &quot;JUnit.CarWorkshopTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;lab4&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Damkilde/Documents/School/JAVA/designJava/Labbar/lab1/MVC&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Lab3&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/46725/IdeaProjects/lab1&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Damkilde\Documents\School\JAVA\designJava\Labbar\lab1\MVC" />
+      <recent name="C:\Users\46725\IdeaProjects\lab1" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Damkilde\Documents\School\JAVA\designJava\Labbar\lab1\MVC" />
+      <recent name="C:\Users\46725\IdeaProjects\lab1\pics" />
+      <recent name="C:\Users\46725\IdeaProjects\lab1" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
+    <key name="CreateTestDialog.RecentsKey">
       <recent name="" />
     </key>
-  </component>
-  <component name="RunManager" selected="Application.mainApp">
-    <configuration name="CarController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="CarController" />
-      <module name="lab1" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="mainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MVC.mainApp" />
-      <module name="lab1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="MVC.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.mainApp" />
-        <item itemvalue="Application.CarController" />
-        <item itemvalue="Application.mainApp" />
-        <item itemvalue="Application.CarController" />
-        <item itemvalue="Application.CarController" />
-      </list>
-    </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
-      </set>
-    </attachedChunks>
-  </component>
-  <component name="ShelveChangesManager">
-    <option name="groupingKeys">
-      <option value="directory" />
-      <option value="module" />
-    </option>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c186c5cf-6ed6-423a-978d-3f4c71c798ab" name="Changes" comment="" />
-      <created>1706705593796</created>
+      <changelist id="4e3097a4-7052-494d-8302-f41f496d44d7" name="Changes" comment="" />
+      <created>1705580410242</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1706705593796</updated>
-      <workItem from="1706705594868" duration="1014000" />
-      <workItem from="1706706793066" duration="112000" />
-      <workItem from="1706707662718" duration="343000" />
-      <workItem from="1707397804685" duration="4000" />
-      <workItem from="1707397811831" duration="668000" />
-      <workItem from="1707831072496" duration="1455000" />
-      <workItem from="1707999851895" duration="5728000" />
-      <workItem from="1708096587847" duration="169000" />
-      <workItem from="1708604433022" duration="10442000" />
-      <workItem from="1708975473319" duration="742000" />
-      <workItem from="1709036044166" duration="7277000" />
-      <workItem from="1709043376160" duration="79000" />
+      <updated>1705580410242</updated>
+      <workItem from="1705580412049" duration="11877000" />
+      <workItem from="1705668740557" duration="23000" />
+      <workItem from="1706014526111" duration="586000" />
+      <workItem from="1706015220754" duration="31000" />
+      <workItem from="1706016229580" duration="817000" />
+      <workItem from="1706102805419" duration="4266000" />
+      <workItem from="1706185921359" duration="7854000" />
+      <workItem from="1706259463506" duration="365000" />
+      <workItem from="1706278091791" duration="5365000" />
+      <workItem from="1706531493026" duration="60000" />
+      <workItem from="1706533838501" duration="1110000" />
+      <workItem from="1706538070136" duration="1861000" />
+      <workItem from="1706617507792" duration="6326000" />
+      <workItem from="1706705372956" duration="53000" />
+      <workItem from="1706790484468" duration="4941000" />
+      <workItem from="1706799129832" duration="8044000" />
+      <workItem from="1707122703578" duration="5379000" />
+      <workItem from="1707218151580" duration="6677000" />
+      <workItem from="1707312892262" duration="4304000" />
+      <workItem from="1707396277958" duration="5072000" />
+      <workItem from="1707487725702" duration="4661000" />
+      <workItem from="1707738647748" duration="2268000" />
+      <workItem from="1707829542079" duration="3050000" />
+      <workItem from="1707932540053" duration="857000" />
+      <workItem from="1707999094279" duration="1503000" />
+      <workItem from="1708001667752" duration="2072000" />
     </task>
-    <task id="LOCAL-00001" summary="Lab2 klar">
+    <task id="LOCAL−00001" summary="Skapat car class. Extendat saab&amp;volvo">
       <option name="closed" value="true" />
-      <created>1706706525334</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1706706525334</updated>
+      <created>1706014574094</created>
+      <option name="number" value="LOCAL−00001" />
+      <option name="presentableId" value="LOCAL−00001" />
+      <updated>1706014574094</updated>
     </task>
-    <task id="LOCAL-00002" summary="Lab2 klar">
+    <task id="LOCAL−00002" summary="Skapat car class. Extendat saab&amp;volvo">
       <option name="closed" value="true" />
-      <created>1706706597757</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1706706597757</updated>
+      <created>1706015004387</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1706015004387</updated>
     </task>
-    <task id="LOCAL-00003" summary="Lab2 klar">
+    <task id="LOCAL−00003" summary="Skapat car class. Extendat saab&amp;volvo">
       <option name="closed" value="true" />
-      <created>1707827397726</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1707827397726</updated>
+      <created>1706015016045</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1706015016045</updated>
     </task>
-    <task id="LOCAL-00004" summary="egen refractor klar">
+    <task id="LOCAL−00004" summary="Skapat car class. Extendat saab&amp;volvo">
       <option name="closed" value="true" />
-      <created>1708608639388</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1708608639388</updated>
+      <created>1706018634684</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1706018634684</updated>
     </task>
-    <task id="LOCAL-00005" summary="Changes by 46725">
+    <task id="LOCAL−00005" summary="Skapat car class. Extendat saab&amp;volvo">
       <option name="closed" value="true" />
-      <created>1708608672081</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1708608672081</updated>
+      <created>1706018734493</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1706018734493</updated>
     </task>
-    <task id="LOCAL-00006" summary="egen refractor klar">
+    <task id="LOCAL−00006" summary="Skapat car class. Extendat saab&amp;volvo">
       <option name="closed" value="true" />
-      <created>1708615070891</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1708615070891</updated>
+      <created>1706108781414</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1706108781414</updated>
     </task>
-    <task id="LOCAL-00007" summary="egen refractor klar">
+    <task id="LOCAL−00007" summary="Changes by Damkilde">
       <option name="closed" value="true" />
-      <created>1709041841910</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1709041841911</updated>
+      <created>1706108786461</created>
+      <option name="number" value="LOCAL−00007" />
+      <option name="presentableId" value="LOCAL−00007" />
+      <updated>1706108786462</updated>
     </task>
-    <task id="LOCAL-00008" summary="egen refractor klar">
+    <task id="LOCAL−00008" summary="Skapat car class. Extendat saab&amp;volvo">
       <option name="closed" value="true" />
-      <created>1709042511177</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1709042511177</updated>
+      <created>1706109578336</created>
+      <option name="number" value="LOCAL−00008" />
+      <option name="presentableId" value="LOCAL−00008" />
+      <updated>1706109578336</updated>
     </task>
-    <task id="LOCAL-00009" summary="Changes by johanbrynne">
+    <task id="LOCAL−00009" summary="Skapat car class. Extendat saab&amp;volvo">
       <option name="closed" value="true" />
-      <created>1709042645489</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1709042645489</updated>
+      <created>1706192176517</created>
+      <option name="number" value="LOCAL−00009" />
+      <option name="presentableId" value="LOCAL−00009" />
+      <updated>1706192176517</updated>
     </task>
-    <task id="LOCAL-00010" summary="Changes by johanbrynne">
+    <task id="LOCAL−00010" summary="Changes by Damkilde">
       <option name="closed" value="true" />
-      <created>1709042658819</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1709042658819</updated>
+      <created>1706192181512</created>
+      <option name="number" value="LOCAL−00010" />
+      <option name="presentableId" value="LOCAL−00010" />
+      <updated>1706192181512</updated>
     </task>
-    <task id="LOCAL-00011" summary="egen refractor klar">
+    <task id="LOCAL−00011" summary="Changes by johanbrynne">
       <option name="closed" value="true" />
-      <created>1709042833123</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1709042833123</updated>
+      <created>1706192186356</created>
+      <option name="number" value="LOCAL−00011" />
+      <option name="presentableId" value="LOCAL−00011" />
+      <updated>1706192186356</updated>
     </task>
-    <task id="LOCAL-00012" summary="egen refractor klar">
+    <task id="LOCAL−00012" summary="Skapat car class. Extendat saab&amp;volvo">
       <option name="closed" value="true" />
-      <created>1709043353305</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1709043353305</updated>
+      <created>1706193756932</created>
+      <option name="number" value="LOCAL−00012" />
+      <option name="presentableId" value="LOCAL−00012" />
+      <updated>1706193756932</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL−00013" summary="Changes by Damkilde">
+      <option name="closed" value="true" />
+      <created>1706193760774</created>
+      <option name="number" value="LOCAL−00013" />
+      <option name="presentableId" value="LOCAL−00013" />
+      <updated>1706193760774</updated>
+    </task>
+    <task id="LOCAL−00014" summary="Changes by johanbrynne">
+      <option name="closed" value="true" />
+      <created>1706193764170</created>
+      <option name="number" value="LOCAL−00014" />
+      <option name="presentableId" value="LOCAL−00014" />
+      <updated>1706193764170</updated>
+    </task>
+    <task id="LOCAL−00015" summary="Skapat car class. Extendat saab&amp;volvo">
+      <option name="closed" value="true" />
+      <created>1706193769855</created>
+      <option name="number" value="LOCAL−00015" />
+      <option name="presentableId" value="LOCAL−00015" />
+      <updated>1706193769855</updated>
+    </task>
+    <task id="LOCAL−00016" summary="Skapat car class. Extendat saab&amp;volvo">
+      <option name="closed" value="true" />
+      <created>1706538403490</created>
+      <option name="number" value="LOCAL−00016" />
+      <option name="presentableId" value="LOCAL−00016" />
+      <updated>1706538403491</updated>
+    </task>
+    <task id="LOCAL−00017" summary="Skapat car class. Extendat saab&amp;volvo">
+      <option name="closed" value="true" />
+      <created>1706617420505</created>
+      <option name="number" value="LOCAL−00017" />
+      <option name="presentableId" value="LOCAL−00017" />
+      <updated>1706617420505</updated>
+    </task>
+    <task id="LOCAL−00018" summary="Skapat car class. Extendat saab&amp;volvo">
+      <option name="closed" value="true" />
+      <created>1706617558011</created>
+      <option name="number" value="LOCAL−00018" />
+      <option name="presentableId" value="LOCAL−00018" />
+      <updated>1706617558011</updated>
+    </task>
+    <task id="LOCAL−00019" summary="Skapat car class. Extendat saab&amp;volvo">
+      <option name="closed" value="true" />
+      <created>1706622673785</created>
+      <option name="number" value="LOCAL−00019" />
+      <option name="presentableId" value="LOCAL−00019" />
+      <updated>1706622673785</updated>
+    </task>
+    <task id="LOCAL−00020" summary="Changes by Damkilde">
+      <option name="closed" value="true" />
+      <created>1706622686729</created>
+      <option name="number" value="LOCAL−00020" />
+      <option name="presentableId" value="LOCAL−00020" />
+      <updated>1706622686729</updated>
+    </task>
+    <task id="LOCAL−00021" summary="Skapat car class. Extendat saab&amp;volvo">
+      <option name="closed" value="true" />
+      <created>1706622693661</created>
+      <option name="number" value="LOCAL−00021" />
+      <option name="presentableId" value="LOCAL−00021" />
+      <updated>1706622693661</updated>
+    </task>
+    <task id="LOCAL−00022" summary="Skapat car class. Extendat saab&amp;volvo">
+      <option name="closed" value="true" />
+      <created>1706796273421</created>
+      <option name="number" value="LOCAL−00022" />
+      <option name="presentableId" value="LOCAL−00022" />
+      <updated>1706796273421</updated>
+    </task>
+    <task id="LOCAL−00023" summary="Skapat car class. Extendat saab&amp;volvo">
+      <option name="closed" value="true" />
+      <created>1706796288380</created>
+      <option name="number" value="LOCAL−00023" />
+      <option name="presentableId" value="LOCAL−00023" />
+      <updated>1706796288380</updated>
+    </task>
+    <task id="LOCAL−00024" summary="Changes by johanbrynne">
+      <option name="closed" value="true" />
+      <created>1706796298230</created>
+      <option name="number" value="LOCAL−00024" />
+      <option name="presentableId" value="LOCAL−00024" />
+      <updated>1706796298230</updated>
+    </task>
+    <task id="LOCAL−00025" summary="Skapat car class. Extendat saab&amp;volvo">
+      <option name="closed" value="true" />
+      <created>1706796720459</created>
+      <option name="number" value="LOCAL−00025" />
+      <option name="presentableId" value="LOCAL−00025" />
+      <updated>1706796720459</updated>
+    </task>
+    <task id="LOCAL−00026" summary="Skapat car class. Extendat saab&amp;volvo">
+      <option name="closed" value="true" />
+      <created>1706799806638</created>
+      <option name="number" value="LOCAL−00026" />
+      <option name="presentableId" value="LOCAL−00026" />
+      <updated>1706799806638</updated>
+    </task>
+    <task id="LOCAL−00027" summary="Skapat car class. Extendat saab&amp;volvo">
+      <option name="closed" value="true" />
+      <created>1706801906180</created>
+      <option name="number" value="LOCAL−00027" />
+      <option name="presentableId" value="LOCAL−00027" />
+      <updated>1706801906180</updated>
+    </task>
+    <task id="LOCAL−00028" summary="Changes by johanbrynne">
+      <option name="closed" value="true" />
+      <created>1706801913740</created>
+      <option name="number" value="LOCAL−00028" />
+      <option name="presentableId" value="LOCAL−00028" />
+      <updated>1706801913740</updated>
+    </task>
+    <task id="LOCAL−00029" summary="Skapat car class. Extendat saab&amp;volvo">
+      <option name="closed" value="true" />
+      <created>1707218168785</created>
+      <option name="number" value="LOCAL−00029" />
+      <option name="presentableId" value="LOCAL−00029" />
+      <updated>1707218168785</updated>
+    </task>
+    <task id="LOCAL−00030" summary="Skapat car class. Extendat saab&amp;volvo">
+      <option name="closed" value="true" />
+      <created>1707218188812</created>
+      <option name="number" value="LOCAL−00030" />
+      <option name="presentableId" value="LOCAL−00030" />
+      <updated>1707218188812</updated>
+    </task>
+    <task id="LOCAL−00031" summary="Skapat car class. Extendat saab&amp;volvo">
+      <option name="closed" value="true" />
+      <created>1707233410960</created>
+      <option name="number" value="LOCAL−00031" />
+      <option name="presentableId" value="LOCAL−00031" />
+      <updated>1707233410960</updated>
+    </task>
+    <task id="LOCAL−00032" summary="Skapat car class. Extendat saab&amp;volvo">
+      <option name="closed" value="true" />
+      <created>1707320218101</created>
+      <option name="number" value="LOCAL−00032" />
+      <option name="presentableId" value="LOCAL−00032" />
+      <updated>1707320218101</updated>
+    </task>
+    <task id="LOCAL−00033" summary="Skapat car class. Extendat saab&amp;volvo">
+      <option name="closed" value="true" />
+      <created>1707492354886</created>
+      <option name="number" value="LOCAL−00033" />
+      <option name="presentableId" value="LOCAL−00033" />
+      <updated>1707492354886</updated>
+    </task>
+    <task id="LOCAL−00034" summary="Skapat car class. Extendat saab&amp;volvo">
+      <option name="closed" value="true" />
+      <created>1707492375963</created>
+      <option name="number" value="LOCAL−00034" />
+      <option name="presentableId" value="LOCAL−00034" />
+      <updated>1707492375963</updated>
+    </task>
+    <task id="LOCAL−00035" summary="Changes by Damkilde">
+      <option name="closed" value="true" />
+      <created>1707492384400</created>
+      <option name="number" value="LOCAL−00035" />
+      <option name="presentableId" value="LOCAL−00035" />
+      <updated>1707492384400</updated>
+    </task>
+    <task id="LOCAL−00036" summary="Changes by johanbrynne">
+      <option name="closed" value="true" />
+      <created>1707492391954</created>
+      <option name="number" value="LOCAL−00036" />
+      <option name="presentableId" value="LOCAL−00036" />
+      <updated>1707492391954</updated>
+    </task>
+    <task id="LOCAL−00037" summary="Skapat car class. Extendat saab&amp;volvo">
+      <option name="closed" value="true" />
+      <created>1707492402529</created>
+      <option name="number" value="LOCAL−00037" />
+      <option name="presentableId" value="LOCAL−00037" />
+      <updated>1707492402529</updated>
+    </task>
+    <task id="LOCAL−00038" summary="Skapat car class. Extendat saab&amp;volvo">
+      <option name="closed" value="true" />
+      <created>1708002521684</created>
+      <option name="number" value="LOCAL−00038" />
+      <option name="presentableId" value="LOCAL−00038" />
+      <updated>1708002521684</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="OPEN_GENERIC_TABS">
-      <map>
-        <entry key="5df85850-ac54-4cdf-a775-27686657df0d" value="TOOL_WINDOW" />
-      </map>
-    </option>
     <option name="TAB_STATES">
       <map>
-        <entry key="5df85850-ac54-4cdf-a775-27686657df0d">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="HEAD" />
-                      </list>
-                    </value>
-                  </entry>
-                  <entry key="roots">
-                    <value>
-                      <list>
-                        <option value="$PROJECT_DIR$" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
-            </State>
-          </value>
-        </entry>
         <entry key="MAIN">
           <value>
             <State />
@@ -312,17 +419,21 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Lab2 klar" />
-    <MESSAGE value="Changes by 46725" />
+    <MESSAGE value="new push v1" />
+    <MESSAGE value="Scania ok &amp; 1 test case" />
+    <MESSAGE value="Changes by Damkilde" />
     <MESSAGE value="Changes by johanbrynne" />
-    <MESSAGE value="egen refractor klar" />
-    <option name="LAST_COMMIT_MESSAGE" value="egen refractor klar" />
+    <MESSAGE value="Skapat car class. Extendat saab&amp;volvo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Skapat car class. Extendat saab&amp;volvo" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/lab1$CarWorkshopTest.ic" NAME="CarWorkshopTest Coverage Results" MODIFIED="1706706407445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/lab1$VolvoWorkshopTest.ic" NAME="VolvoWorkshopTest Coverage Results" MODIFIED="1706283104948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/lab1$CarTest.ic" NAME="CarTest Coverage Results" MODIFIED="1706108905351" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/lab1$CartransporterTest.ic" NAME="CartransporterTest Coverage Results" MODIFIED="1706192343875" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/lab1$AnyCarWorkshopTest.ic" NAME="AnyCarWorkshopTest Coverage Results" MODIFIED="1706280982715" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
