@@ -140,8 +140,7 @@ public class Module {
 
     void brake() {
         double brake = 0.7;
-        for (Car car : cars
-        ) {
+        for (Car car : cars) {
             car.brake(brake);
         }
     }

@@ -9,8 +9,6 @@ public class mainApp {
 
     private final int delay = 50;
 
-
-
     public static void main(String[] args) {
         Module module = new Module();
         Controller cc = new Controller("bonga", module);
